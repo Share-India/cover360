@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cover360">
+  <defs>
+    <linearGradient id="c360" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b86ff"/>
+      <stop offset="1" stop-color="#0050d4"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3 56 12v18c0 14.500-10 25.500-24 31C18 55.500 8 44.500 8 30V12z" fill="url(#c360)"/>
+  <!-- 360 degree ring with arrowhead -->
+  <circle cx="32" cy="31" r="13" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" stroke-dasharray="70 11.700" transform="rotate(-60 32 31)"/>
+  <polygon points="31.400,17.250 28.500,22.200 25.900,15.600" fill="#fff"/>
+  <!-- protection check -->
+  <path d="M26.500 31.500l4 4 7.500-8.500" fill="none" stroke="#fff" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

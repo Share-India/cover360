@@ -1,0 +1,6 @@
+﻿Client Name,Email,Mobile,Date of Birth (DD-MM-YYYY),Vehicle Make & Model,Manufacture Year,IDV (Rs),Vehicles Owned (1/2/3+),Registration No.,Income (Rs) - optional
+Rahul Sharma,rahul.sharma@example.com,9876543210,15-04-1988,Hyundai Creta SX,2021,950000,1,MH12AB1234,
+Priya Patel,priya.patel@example.com,9823012345,22-09-1992,Maruti Swift VXI,2022,520000,2,GJ01CD5678,
+Amit Verma,amit.verma@example.com,9811122233,03-01-1979,BMW X3 xDrive20d,2023,5092505,3,DL3CEF9012,
+Sneha Kulkarni,sneha.k@example.com,9890098900,,Honda City ZX,2020,610000,1,MH14GH3456,
+Vikram Singh,,9765432109,30-11-1985,Toyota Innova Crysta,2019,1150000,1,RJ14IJ7890,

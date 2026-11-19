@@ -1,0 +1,1143 @@
+RTO_Code,City,State,Tier
+MH01,Mumbai,Maharashtra,Metro
+MH02,Mumbai,Maharashtra,Metro
+MH03,Mumbai,Maharashtra,Metro
+MH04,Thane,Maharashtra,Metro
+MH05,Kalyan,Maharashtra,Metro
+MH06,Raigad,Maharashtra,Tier2
+MH07,Sindhudurg,Maharashtra,Tier3
+MH09,Kolhapur,Maharashtra,Tier2
+MH10,Sangli,Maharashtra,Tier2
+MH11,Satara,Maharashtra,Tier2
+MH12,Pune,Maharashtra,Metro
+MH13,Solapur,Maharashtra,Tier2
+MH14,Pimpri Chinchwad,Maharashtra,Metro
+MH15,Nashik,Maharashtra,Tier2
+MH16,Ahmednagar,Maharashtra,Tier2
+MH17,Shrirampur,Maharashtra,Tier3
+MH18,Dhule,Maharashtra,Tier2
+MH19,Jalgaon,Maharashtra,Tier2
+MH20,Aurangabad,Maharashtra,Tier2
+MH21,Jalna,Maharashtra,Tier3
+MH22,Parbhani,Maharashtra,Tier3
+MH23,Beed,Maharashtra,Tier3
+MH24,Latur,Maharashtra,Tier2
+MH25,Osmanabad,Maharashtra,Tier3
+MH26,Nanded,Maharashtra,Tier2
+MH27,Amravati,Maharashtra,Tier2
+MH28,Buldhana,Maharashtra,Tier3
+MH29,Yavatmal,Maharashtra,Tier3
+MH30,Akola,Maharashtra,Tier2
+MH31,Nagpur,Maharashtra,Tier2
+MH32,Wardha,Maharashtra,Tier3
+MH33,Gadchiroli,Maharashtra,Tier3
+MH34,Chandrapur,Maharashtra,Tier2
+MH35,Gondia,Maharashtra,Tier3
+MH36,Bhandara,Maharashtra,Tier3
+MH37,Washim,Maharashtra,Tier3
+MH38,Hingoli,Maharashtra,Tier3
+MH39,Nandurbar,Maharashtra,Tier3
+MH40,Wadi Nagpur,Maharashtra,Tier2
+MH41,Malegaon,Maharashtra,Tier2
+MH42,Baramati,Maharashtra,Tier2
+MH43,Navi Mumbai,Maharashtra,Metro
+MH44,Ambejogai,Maharashtra,Tier3
+MH45,Akluj,Maharashtra,Tier3
+MH46,Panvel,Maharashtra,Metro
+KA01,Bangalore,Karnataka,Metro
+KA05,Bangalore,Karnataka,Metro
+DL01,New Delhi,Delhi,Metro
+DL04,New Delhi,Delhi,Metro
+UP16,Noida,Uttar Pradesh,Tier2
+UP14,Ghaziabad,Uttar Pradesh,Tier2
+HR26,Gurgaon,Haryana,Tier2
+GJ01,Ahmedabad,Gujarat,Tier2
+MP04,Bhopal,Madhya Pradesh,Tier2
+MP09,Indore,Madhya Pradesh,Tier2
+RJ14,Jaipur,Rajasthan,Tier2
+UP32,Lucknow,Uttar Pradesh,Tier2
+UP78,Kanpur,Uttar Pradesh,Tier2
+UP53,Gorakhpur,Uttar Pradesh,Tier3
+AP09,Hyderabad,Andhra Pradesh,Metro
+TS09,Hyderabad,Telangana,Metro
+TS07,Hyderabad,Telangana,Metro
+AP16,Vijayawada,Andhra Pradesh,Tier2
+AP31,Visakhapatnam,Andhra Pradesh,Tier2
+TN01,Chennai,Tamil Nadu,Metro
+TN02,Chennai,Tamil Nadu,Metro
+TN09,Chennai,Tamil Nadu,Metro
+TN10,Chennai,Tamil Nadu,Metro
+TN37,Coimbatore,Tamil Nadu,Tier2
+TN38,Coimbatore,Tamil Nadu,Tier2
+TN45,Tiruchirappalli,Tamil Nadu,Tier2
+TN57,Dindigul,Tamil Nadu,Tier3
+TN58,Madurai,Tamil Nadu,Tier2
+TN59,Madurai,Tamil Nadu,Tier2
+TN72,Tirunelveli,Tamil Nadu,Tier2
+KL01,Thiruvananthapuram,Kerala,Tier2
+KL07,Ernakulam,Kerala,Tier2
+KL11,Kozhikode,Kerala,Tier2
+KL05,Kottayam,Kerala,Tier3
+KL08,Thrissur,Kerala,Tier2
+KA02,Bangalore,Karnataka,Metro
+KA03,Bangalore,Karnataka,Metro
+KA04,Bangalore,Karnataka,Metro
+KA09,Mysore,Karnataka,Tier2
+KA19,Mangalore,Karnataka,Tier2
+KA21,Puttur,Karnataka,Tier3
+WB01,Kolkata,West Bengal,Metro
+WB02,Kolkata,West Bengal,Metro
+WB04,Kolkata,West Bengal,Metro
+WB11,Howrah,West Bengal,Tier2
+WB12,Howrah,West Bengal,Tier2
+WB73,Siliguri,West Bengal,Tier2
+BR01,Patna,Bihar,Tier2
+BR06,Muzaffarpur,Bihar,Tier2
+BR09,Begusarai,Bihar,Tier3
+OR02,Bhubaneswar,Odisha,Tier2
+OR05,Cuttack,Odisha,Tier2
+OR09,Sambalpur,Odisha,Tier3
+PB01,Chandigarh,Punjab,Tier2
+PB02,Amritsar,Punjab,Tier2
+PB08,Jalandhar,Punjab,Tier2
+PB10,Ludhiana,Punjab,Tier2
+RJ01,Ajmer,Rajasthan,Tier2
+RJ19,Jodhpur,Rajasthan,Tier2
+RJ27,Udaipur,Rajasthan,Tier2
+RJ20,Kota,Rajasthan,Tier2
+GJ05,Surat,Gujarat,Tier2
+GJ06,Vadodara,Gujarat,Tier2
+GJ12,Kutch,Gujarat,Tier3
+GJ21,Navsari,Gujarat,Tier3
+MP07,Gwalior,Madhya Pradesh,Tier2
+MP15,Sagar,Madhya Pradesh,Tier3
+MP20,Jabalpur,Madhya Pradesh,Tier2
+UP15,Meerut,Uttar Pradesh,Tier2
+UP70,Allahabad,Uttar Pradesh,Tier2
+UP65,Varanasi,Uttar Pradesh,Tier2
+UP80,Agra,Uttar Pradesh,Tier2
+HR05,Karnal,Haryana,Tier3
+HR06,Panipat,Haryana,Tier3
+HR29,Faridabad,Haryana,Tier2
+CG04,Raipur,Chhattisgarh,Tier2
+CG07,Bhilai,Chhattisgarh,Tier2
+CG10,Bilaspur,Chhattisgarh,Tier3
+JH01,Ranchi,Jharkhand,Tier2
+JH05,Jamshedpur,Jharkhand,Tier2
+JH10,Dhanbad,Jharkhand,Tier2
+UK01,Almora,Uttarakhand,Tier3
+UK07,Dehradun,Uttarakhand,Tier2
+UK08,Haridwar,Uttarakhand,Tier3
+AS01,Guwahati,Assam,Tier2
+AS04,Sibsagar,Assam,Tier3
+AS11,Silchar,Assam,Tier3
+TR01,Agartala,Tripura,Tier3
+ML05,Shillong,Meghalaya,Tier3
+MN01,Imphal,Manipur,Tier3
+MZ01,Aizawl,Mizoram,Tier3
+NL01,Kohima,Nagaland,Tier3
+CH01,Chandigarh,Chandigarh,Tier2
+GA01,Panaji,Goa,Tier3
+GA02,Margao,Goa,Tier3
+DL02,New Delhi,Delhi,Metro
+DL03,New Delhi,Delhi,Metro
+DL05,New Delhi,Delhi,Metro
+DL06,New Delhi,Delhi,Metro
+DL07,New Delhi,Delhi,Metro
+DL08,New Delhi,Delhi,Metro
+DL09,New Delhi,Delhi,Metro
+GJ02,Mehsana,Gujarat,Tier3
+GJ03,Rajkot,Gujarat,Tier2
+GJ04,Bhavnagar,Gujarat,Tier2
+GJ07,Nadiad,Gujarat,Tier3
+GJ08,Palanpur,Gujarat,Tier3
+GJ09,Himmatnagar,Gujarat,Tier3
+GJ10,Jamnagar,Gujarat,Tier2
+GJ11,Junagadh,Gujarat,Tier2
+GJ13,Surendranagar,Gujarat,Tier3
+GJ14,Amreli,Gujarat,Tier3
+GJ15,Valsad,Gujarat,Tier3
+GJ16,Bharuch,Gujarat,Tier3
+GJ17,Godhra,Gujarat,Tier3
+GJ18,Gandhinagar,Gujarat,Tier2
+GJ19,Bardoli,Gujarat,Tier3
+GJ20,Dahod,Gujarat,Tier3
+GJ22,Rajpipla,Gujarat,Tier3
+GJ23,Anand,Gujarat,Tier3
+GJ24,Patan,Gujarat,Tier3
+GJ25,Porbandar,Gujarat,Tier3
+GJ26,Vyara,Gujarat,Tier3
+GJ27,Ahmedabad East,Gujarat,Tier2
+GJ30,Waghai,Gujarat,Tier3
+RJ02,Alwar,Rajasthan,Tier2
+RJ03,Banswara,Rajasthan,Tier3
+RJ04,Barmer,Rajasthan,Tier3
+RJ05,Bharatpur,Rajasthan,Tier2
+RJ06,Bhilwara,Rajasthan,Tier2
+RJ07,Bikaner,Rajasthan,Tier2
+RJ08,Bundi,Rajasthan,Tier3
+RJ09,Chittorgarh,Rajasthan,Tier3
+RJ10,Churu,Rajasthan,Tier3
+RJ11,Dholpur,Rajasthan,Tier3
+RJ12,Dungarpur,Rajasthan,Tier3
+RJ13,Sri Ganganagar,Rajasthan,Tier2
+RJ15,Jaisalmer,Rajasthan,Tier3
+RJ16,Jalore,Rajasthan,Tier3
+RJ17,Jhalawar,Rajasthan,Tier3
+RJ18,Jhunjhunu,Rajasthan,Tier3
+RJ21,Nagaur,Rajasthan,Tier3
+RJ22,Pali,Rajasthan,Tier3
+RJ23,Sikar,Rajasthan,Tier2
+RJ24,Sirohi,Rajasthan,Tier3
+RJ25,Sawai Madhopur,Rajasthan,Tier3
+RJ26,Tonk,Rajasthan,Tier3
+UP11,Saharanpur,Uttar Pradesh,Tier2
+UP12,Muzaffarnagar,Uttar Pradesh,Tier2
+UP13,Bulandshahr,Uttar Pradesh,Tier2
+UP17,Baghpat,Uttar Pradesh,Tier3
+UP20,Bijnor,Uttar Pradesh,Tier3
+UP21,Moradabad,Uttar Pradesh,Tier2
+UP22,Rampur,Uttar Pradesh,Tier3
+UP23,Amroha,Uttar Pradesh,Tier3
+UP24,Budaun,Uttar Pradesh,Tier3
+UP25,Bareilly,Uttar Pradesh,Tier2
+UP26,Pilibhit,Uttar Pradesh,Tier3
+UP27,Shahjahanpur,Uttar Pradesh,Tier2
+UP30,Hardoi,Uttar Pradesh,Tier3
+UP31,Lakhimpur Kheri,Uttar Pradesh,Tier3
+UP33,Raebareli,Uttar Pradesh,Tier3
+UP34,Sitapur,Uttar Pradesh,Tier3
+UP35,Unnao,Uttar Pradesh,Tier3
+UP36,Amethi,Uttar Pradesh,Tier3
+UP37,Hapur,Uttar Pradesh,Tier3
+UP41,Barabanki,Uttar Pradesh,Tier3
+UP42,Faizabad,Uttar Pradesh,Tier2
+UP43,Gonda,Uttar Pradesh,Tier3
+UP44,Sultanpur,Uttar Pradesh,Tier3
+UP45,Ambedkar Nagar,Uttar Pradesh,Tier3
+UP46,Bahraich,Uttar Pradesh,Tier3
+UP47,Balrampur,Uttar Pradesh,Tier3
+UP50,Azamgarh,Uttar Pradesh,Tier2
+UP51,Basti,Uttar Pradesh,Tier3
+UP52,Deoria,Uttar Pradesh,Tier3
+UP54,Mau,Uttar Pradesh,Tier3
+UP55,Siddharthnagar,Uttar Pradesh,Tier3
+UP56,Maharajganj,Uttar Pradesh,Tier3
+UP57,Padrauna,Uttar Pradesh,Tier3
+UP58,Sant Kabir Nagar,Uttar Pradesh,Tier3
+UP60,Ballia,Uttar Pradesh,Tier3
+UP61,Ghazipur,Uttar Pradesh,Tier3
+UP62,Jaunpur,Uttar Pradesh,Tier3
+UP63,Mirzapur,Uttar Pradesh,Tier3
+UP64,Sonbhadra,Uttar Pradesh,Tier3
+UP66,Bhadohi,Uttar Pradesh,Tier3
+UP67,Chandauli,Uttar Pradesh,Tier3
+UP71,Fatehpur,Uttar Pradesh,Tier3
+UP72,Pratapgarh,Uttar Pradesh,Tier3
+UP73,Kaushambi,Uttar Pradesh,Tier3
+UP74,Kannauj,Uttar Pradesh,Tier3
+UP75,Etawah,Uttar Pradesh,Tier3
+UP76,Farrukhabad,Uttar Pradesh,Tier3
+UP79,Auraiya,Uttar Pradesh,Tier3
+UP81,Aligarh,Uttar Pradesh,Tier2
+UP82,Etah,Uttar Pradesh,Tier3
+UP83,Firozabad,Uttar Pradesh,Tier2
+UP84,Mainpuri,Uttar Pradesh,Tier3
+UP85,Mathura,Uttar Pradesh,Tier2
+UP86,Hathras,Uttar Pradesh,Tier3
+UP87,Kanshiram Nagar,Uttar Pradesh,Tier3
+TN03,Chennai North East,Tamil Nadu,Metro
+TN04,Chennai East,Tamil Nadu,Metro
+TN05,Chennai North,Tamil Nadu,Metro
+TN06,Chennai South East,Tamil Nadu,Metro
+TN07,Chennai South,Tamil Nadu,Metro
+TN11,Tambaram,Tamil Nadu,Metro
+TN12,Poonamallee,Tamil Nadu,Metro
+TN13,Ambattur,Tamil Nadu,Metro
+TN14,Sholinganallur,Tamil Nadu,Metro
+TN15,Ulundurpet,Tamil Nadu,Tier3
+TN16,Tindivanam,Tamil Nadu,Tier3
+TN18,Red Hills,Tamil Nadu,Metro
+TN19,Chengalpattu,Tamil Nadu,Tier2
+TN20,Tiruvallur,Tamil Nadu,Tier3
+TN21,Kanchipuram,Tamil Nadu,Tier2
+TN22,Meenambakkam,Tamil Nadu,Metro
+TN23,Vellore,Tamil Nadu,Tier2
+TN24,Krishnagiri,Tamil Nadu,Tier3
+TN25,Tiruvannamalai,Tamil Nadu,Tier2
+TN28,Namakkal,Tamil Nadu,Tier2
+TN29,Dharmapuri,Tamil Nadu,Tier3
+TN30,Salem,Tamil Nadu,Tier2
+TN31,Cuddalore,Tamil Nadu,Tier2
+TN32,Villupuram,Tamil Nadu,Tier2
+TN33,Erode,Tamil Nadu,Tier2
+TN34,Tiruchengode,Tamil Nadu,Tier3
+TN36,Bhavani,Tamil Nadu,Tier3
+TN39,Tirupur,Tamil Nadu,Tier2
+TN40,Mettupalayam,Tamil Nadu,Tier3
+TN41,Pollachi,Tamil Nadu,Tier3
+TN42,Tirupur South,Tamil Nadu,Tier2
+TN43,Ooty,Tamil Nadu,Tier3
+TN46,Perambalur,Tamil Nadu,Tier3
+TN47,Karur,Tamil Nadu,Tier2
+TN48,Srirangam,Tamil Nadu,Tier3
+TN49,Thanjavur,Tamil Nadu,Tier2
+TN50,Tiruvarur,Tamil Nadu,Tier3
+TN51,Nagapattinam,Tamil Nadu,Tier3
+TN52,Sankagiri,Tamil Nadu,Tier3
+TN54,Salem East,Tamil Nadu,Tier2
+TN55,Pudukottai,Tamil Nadu,Tier3
+TN56,Perundurai,Tamil Nadu,Tier3
+TN60,Theni,Tamil Nadu,Tier3
+TN61,Ariyalur,Tamil Nadu,Tier3
+TN63,Sivaganga,Tamil Nadu,Tier3
+TN64,Ramanathapuram,Tamil Nadu,Tier3
+TN65,Paramakudi,Tamil Nadu,Tier3
+TN66,Coimbatore Central,Tamil Nadu,Tier2
+TN67,Virudhunagar,Tamil Nadu,Tier3
+TN68,Kumbakonam,Tamil Nadu,Tier2
+TN69,Tuticorin,Tamil Nadu,Tier2
+TN70,Hosur,Tamil Nadu,Tier2
+TN73,Ranipet,Tamil Nadu,Tier3
+TN74,Nagercoil,Tamil Nadu,Tier2
+TN75,Marthandam,Tamil Nadu,Tier3
+TN76,Tenkasi,Tamil Nadu,Tier3
+TN77,Attur,Tamil Nadu,Tier3
+TN78,Dharapuram,Tamil Nadu,Tier3
+TN79,Sankarankovil,Tamil Nadu,Tier3
+TN81,Tiruchirappalli East,Tamil Nadu,Tier2
+TN82,Mayiladuthurai,Tamil Nadu,Tier3
+TN83,Vaniyambadi,Tamil Nadu,Tier3
+TN84,Srivilliputhur,Tamil Nadu,Tier3
+TN85,Kundrathur,Tamil Nadu,Tier3
+TN88,Namakkal South,Tamil Nadu,Tier2
+TN90,Salem South,Tamil Nadu,Tier2
+TN91,Chidambaram,Tamil Nadu,Tier3
+TN92,Thiruchendur,Tamil Nadu,Tier3
+TN93,Mettur,Tamil Nadu,Tier3
+TN94,Palani,Tamil Nadu,Tier3
+TN95,Sivakasi,Tamil Nadu,Tier2
+TN96,Kovilpatti,Tamil Nadu,Tier3
+TN97,Arani,Tamil Nadu,Tier3
+TN99,Coimbatore West,Tamil Nadu,Tier2
+AP01,Adilabad,Andhra Pradesh,Tier3
+AP02,Anantapur,Andhra Pradesh,Tier2
+AP03,Chittoor,Andhra Pradesh,Tier2
+AP04,Kadapa,Andhra Pradesh,Tier2
+AP05,Kakinada,Andhra Pradesh,Tier2
+AP06,Amalapuram,Andhra Pradesh,Tier3
+AP07,Guntur,Andhra Pradesh,Tier2
+AP08,Rajamundry,Andhra Pradesh,Tier2
+AP10,Secunderabad,Andhra Pradesh,Metro
+AP11,Hyderabad Central,Andhra Pradesh,Metro
+AP12,Hyderabad South,Andhra Pradesh,Metro
+AP13,Hyderabad West,Andhra Pradesh,Metro
+AP14,Hyderabad East,Andhra Pradesh,Metro
+AP15,Karimnagar,Andhra Pradesh,Tier2
+AP18,Machilipatnam,Andhra Pradesh,Tier3
+AP20,Khammam,Andhra Pradesh,Tier2
+AP21,Kurnool,Andhra Pradesh,Tier2
+AP22,Mahbubnagar,Andhra Pradesh,Tier3
+AP23,Medak,Andhra Pradesh,Tier3
+AP24,Nalgonda,Andhra Pradesh,Tier3
+AP25,Nizamabad,Andhra Pradesh,Tier2
+AP26,Nellore,Andhra Pradesh,Tier2
+AP27,Ongole,Andhra Pradesh,Tier2
+AP28,Srikakulam,Andhra Pradesh,Tier3
+AP29,Tirupati,Andhra Pradesh,Tier2
+AP30,Srikakulam,Andhra Pradesh,Tier3
+AP35,Vizianagaram,Andhra Pradesh,Tier3
+AP36,Warangal,Andhra Pradesh,Tier2
+AP37,Eluru,Andhra Pradesh,Tier2
+AP39,Bhimavaram,Andhra Pradesh,Tier3
+BR02,Gaya,Bihar,Tier2
+BR03,Bhojpur,Bihar,Tier3
+BR04,Chapra,Bihar,Tier3
+BR05,Motihari,Bihar,Tier3
+BR07,Darbhanga,Bihar,Tier2
+BR08,Munger,Bihar,Tier3
+BR10,Bhagalpur,Bihar,Tier2
+BR11,Purnia,Bihar,Tier2
+BR19,Saharsa,Bihar,Tier3
+BR21,Nalanda,Bihar,Tier3
+BR24,Rohtas,Bihar,Tier3
+BR28,Gopalganj,Bihar,Tier3
+BR33,Samastipur,Bihar,Tier3
+MH08,Ratnagiri,Maharashtra,Tier3
+MH47,Mumbai North,Maharashtra,Metro
+MH48,Vasai,Maharashtra,Tier2
+MH49,Nagpur East,Maharashtra,Tier2
+MH50,Karad,Maharashtra,Tier3
+KA06,Tumkur,Karnataka,Tier3
+KA07,Kolar,Karnataka,Tier3
+KA08,KGF,Karnataka,Tier3
+KA10,Chamrajnagar,Karnataka,Tier3
+KA11,Mandya,Karnataka,Tier3
+KA12,Madikeri,Karnataka,Tier3
+KA13,Hassan,Karnataka,Tier3
+KA14,Shimoga,Karnataka,Tier2
+KA15,Udupi,Karnataka,Tier2
+KA16,Chitradurga,Karnataka,Tier3
+KA17,Davanagere,Karnataka,Tier2
+KA18,Chikmagalur,Karnataka,Tier3
+KA20,Udupi,Karnataka,Tier2
+KA25,Dharwad,Karnataka,Tier2
+KA32,Kalaburagi,Karnataka,Tier2
+KA51,Bangalore South,Karnataka,Metro
+KA53,Bangalore East,Karnataka,Metro
+WB03,Kolkata North,West Bengal,Metro
+WB08,Salt Lake,West Bengal,Metro
+WB20,Howrah RTO,West Bengal,Tier2
+WB24,Haldia,West Bengal,Tier3
+WB30,Tamluk,West Bengal,Tier3
+WB38,Asansol,West Bengal,Tier2
+WB40,Durgapur,West Bengal,Tier2
+WB52,Nadia,West Bengal,Tier3
+WB58,Murshidabad,West Bengal,Tier3
+WB60,Malda,West Bengal,Tier3
+WB74,Siliguri RTO,West Bengal,Tier2
+WB78,Darjeeling,West Bengal,Tier3
+KL02,Kollam,Kerala,Tier3
+KL03,Pathanamthitta,Kerala,Tier3
+KL04,Alappuzha,Kerala,Tier3
+KL06,Idukki,Kerala,Tier3
+KL09,Palakkad,Kerala,Tier3
+KL10,Malappuram,Kerala,Tier3
+KL12,Wayanad,Kerala,Tier3
+KL13,Kannur,Kerala,Tier3
+KL14,Kasaragod,Kerala,Tier3
+KL15,KSRTC Thiruvananthapuram,Kerala,Tier2
+KL16,Attingal,Kerala,Tier3
+KL17,Muvattupuzha,Kerala,Tier3
+KL18,Vatakara,Kerala,Tier3
+KL19,Parassala,Kerala,Tier3
+KL20,Neyyattinkara,Kerala,Tier3
+KL21,Nedumangad,Kerala,Tier3
+KL22,Kazhakkoottam,Kerala,Tier3
+KL23,Karunagappally,Kerala,Tier3
+KL24,Kottarakkara,Kerala,Tier3
+KL25,Punalur,Kerala,Tier3
+KL26,Adoor,Kerala,Tier3
+KL27,Thiruvalla,Kerala,Tier3
+KL28,Mallappally,Kerala,Tier3
+KL29,Kayamkulam,Kerala,Tier3
+KL30,Chengannur,Kerala,Tier3
+KL31,Mavelikara,Kerala,Tier3
+KL32,Cherthala,Kerala,Tier3
+KL33,Changanassery,Kerala,Tier3
+KL34,Kanjirappally,Kerala,Tier3
+KL35,Pala,Kerala,Tier3
+KL36,Vaikom,Kerala,Tier3
+KL37,Vandiperiyar,Kerala,Tier3
+KL38,Thodupuzha,Kerala,Tier3
+KL39,Thripunithura,Kerala,Tier3
+KL40,Perumbavoor,Kerala,Tier3
+KL41,Aluva,Kerala,Tier3
+KL42,North Paravur,Kerala,Tier3
+KL43,Mattancherry,Kerala,Tier3
+KL44,Kothamangalam,Kerala,Tier3
+KL45,Irinjalakuda,Kerala,Tier3
+KL46,Guruvayur,Kerala,Tier3
+KL47,Kodungallur,Kerala,Tier3
+KL48,Wadakkancherry,Kerala,Tier3
+KL49,Alathur,Kerala,Tier3
+KL50,Mannarkkad,Kerala,Tier3
+KL51,Ottappalam,Kerala,Tier3
+KL52,Pattambi,Kerala,Tier3
+KL53,Perinthalmanna,Kerala,Tier3
+KL54,Ponnani,Kerala,Tier3
+KL55,Tirur,Kerala,Tier3
+KL56,Koyilandy,Kerala,Tier3
+KL57,Koduvally,Kerala,Tier3
+KL58,Thalassery,Kerala,Tier3
+KL59,Taliparamba,Kerala,Tier3
+KL60,Kanhangad,Kerala,Tier3
+MP01,Bhopal HQ,Madhya Pradesh,Tier2
+MP02,Bhopal State,Madhya Pradesh,Tier2
+MP03,Bhopal District,Madhya Pradesh,Tier2
+MP05,Hoshangabad,Madhya Pradesh,Tier3
+MP06,Morena,Madhya Pradesh,Tier3
+MP08,Guna,Madhya Pradesh,Tier3
+MP10,Khargone,Madhya Pradesh,Tier3
+MP11,Dhar,Madhya Pradesh,Tier3
+MP12,Khandwa,Madhya Pradesh,Tier3
+MP13,Ujjain,Madhya Pradesh,Tier2
+MP14,Mandsaur,Madhya Pradesh,Tier3
+MP16,Chhatarpur,Madhya Pradesh,Tier3
+MP17,Rewa,Madhya Pradesh,Tier3
+MP18,Shahdol,Madhya Pradesh,Tier3
+MP19,Satna,Madhya Pradesh,Tier3
+MP21,Katni,Madhya Pradesh,Tier3
+MP22,Seoni,Madhya Pradesh,Tier3
+MP39,Rajgarh,Madhya Pradesh,Tier3
+MP41,Dewas,Madhya Pradesh,Tier3
+MP43,Ratlam,Madhya Pradesh,Tier3
+MP44,Neemuch,Madhya Pradesh,Tier3
+MP50,Balaghat,Madhya Pradesh,Tier3
+MP51,Mandla,Madhya Pradesh,Tier3
+MP53,Sidhi,Madhya Pradesh,Tier3
+JH02,Hazaribagh,Jharkhand,Tier3
+JH03,Daltonganj,Jharkhand,Tier3
+JH04,Dumka,Jharkhand,Tier3
+JH06,Chaibasa,Jharkhand,Tier3
+JH07,Gumla,Jharkhand,Tier3
+JH08,Lohardaga,Jharkhand,Tier3
+JH09,Bokaro,Jharkhand,Tier2
+JH11,Giridih,Jharkhand,Tier3
+JH12,Koderma,Jharkhand,Tier3
+JH13,Chatra,Jharkhand,Tier3
+JH14,Garhwa,Jharkhand,Tier3
+JH15,Deoghar,Jharkhand,Tier3
+CG08,Rajnandgaon,Chhattisgarh,Tier3
+CG11,Janjgir-Champa,Chhattisgarh,Tier3
+CG12,Korba,Chhattisgarh,Tier3
+CG13,Raigarh,Chhattisgarh,Tier3
+CG15,Surguja,Chhattisgarh,Tier3
+CG17,Jagdalpur,Chhattisgarh,Tier3
+CG29,Mohla-Manpur-Ambagarh Chowki,Chhattisgarh,Tier3
+HP01,Shimla (State/Commercial),Himachal Pradesh,Tier2
+HP02,Shimla (Urban),Himachal Pradesh,Tier3
+HP03,Shimla (Rural),Himachal Pradesh,Tier3
+HP14,Solan,Himachal Pradesh,Tier3
+HP33,Mandi,Himachal Pradesh,Tier3
+HP37,Palampur,Himachal Pradesh,Tier3
+HP39,Dharamshala,Himachal Pradesh,Tier3
+HP40,Kangra,Himachal Pradesh,Tier3
+HP57,Chowari,Himachal Pradesh,Tier3
+UK02,Bageshwar,Uttarakhand,Tier3
+UK04,Nainital,Uttarakhand,Tier3
+UK05,Pithoragarh,Uttarakhand,Tier3
+UK06,Udham Singh Nagar,Uttarakhand,Tier3
+UK11,Chamoli,Uttarakhand,Tier3
+UK14,Rishikesh,Uttarakhand,Tier3
+UK17,Roorkee,Uttarakhand,Tier3
+JK01,Srinagar,Jammu and Kashmir,Tier2
+JK02,Jammu,Jammu and Kashmir,Tier2
+JK03,Anantnag,Jammu and Kashmir,Tier3
+JK04,Budgam,Jammu and Kashmir,Tier3
+JK05,Baramulla,Jammu and Kashmir,Tier3
+JK08,Kathua,Jammu and Kashmir,Tier3
+JK14,Udhampur,Jammu and Kashmir,Tier3
+LA01,Kargil,Ladakh,Tier3
+LA02,Leh,Ladakh,Tier3
+PY01,Puducherry,Puducherry,Tier2
+PY02,Karaikal,Puducherry,Tier3
+PY03,Mahe,Puducherry,Tier3
+PY04,Yanam,Puducherry,Tier3
+PY05,Oulgaret,Puducherry,Tier3
+AN01,Port Blair,Andaman and Nicobar Islands,Tier3
+LD01,Kavaratti,Lakshadweep,Tier3
+DD02,Diu,Dadra and Nagar Haveli and Daman and Diu,Tier3
+DD03,Daman,Dadra and Nagar Haveli and Daman and Diu,Tier3
+DN09,Silvassa,Dadra and Nagar Haveli and Daman and Diu,Tier3
+TS01,Adilabad,Telangana,Tier3
+TS02,Karimnagar,Telangana,Tier2
+TS03,Warangal,Telangana,Tier2
+TS04,Khammam,Telangana,Tier2
+TS05,Nalgonda,Telangana,Tier3
+TS06,Mahabubnagar,Telangana,Tier3
+TS08,Medchal,Telangana,Tier3
+TS10,Hyderabad North,Telangana,Metro
+TS11,Hyderabad East,Telangana,Metro
+TS12,Hyderabad South,Telangana,Metro
+TS13,Hyderabad West,Telangana,Metro
+TS14,Hyderabad Central,Telangana,Metro
+TS15,Sangareddy,Telangana,Tier3
+TS16,Nizamabad,Telangana,Tier2
+TS17,Kamareddy,Telangana,Tier3
+TS18,Jagtial,Telangana,Tier3
+TS19,Peddapalli,Telangana,Tier3
+TS20,Mahabubabad,Telangana,Tier3
+TS21,Bhadradri Kothagudem,Telangana,Tier3
+TS22,Narayanpet,Telangana,Tier3
+TS23,Sircilla,Telangana,Tier3
+TS24,Wanaparthy,Telangana,Tier3
+TS25,Jayashankar Bhupalpally,Telangana,Tier3
+TS26,Vikarabad,Telangana,Tier3
+TS27,Jogulamba Gadwal,Telangana,Tier3
+TS28,Nagarkurnool,Telangana,Tier3
+TS29,Suryapet,Telangana,Tier3
+TS30,Yadadri Bhuvanagiri,Telangana,Tier3
+TS31,Nirmal,Telangana,Tier3
+TS32,Mancherial,Telangana,Tier3
+TS33,Kumuram Bheem,Telangana,Tier3
+TS34,Mulugu,Telangana,Tier3
+TS35,Narayanpet,Telangana,Tier3
+TS36,Siddipet,Telangana,Tier3
+KA22,Belagavi,Karnataka,Tier2
+KA23,Chikkodi,Karnataka,Tier3
+KA24,Bailhongal,Karnataka,Tier3
+KA26,Gadag,Karnataka,Tier3
+KA27,Haveri,Karnataka,Tier3
+KA28,Vijayapura,Karnataka,Tier3
+KA29,Bagalkot,Karnataka,Tier3
+KA30,Karwar,Karnataka,Tier3
+KA31,Sirsi,Karnataka,Tier3
+KA33,Yadgir,Karnataka,Tier3
+KA34,Ballari,Karnataka,Tier2
+KA35,Hosapete,Karnataka,Tier3
+KA36,Raichur,Karnataka,Tier3
+KA37,Koppal,Karnataka,Tier3
+KA38,Bidar,Karnataka,Tier3
+KA39,Bhalki,Karnataka,Tier3
+KA40,Chikkaballapura,Karnataka,Tier3
+KA41,Kengeri,Karnataka,Metro
+KA42,Ramanagara,Karnataka,Tier3
+KA43,Devanahalli,Karnataka,Tier3
+KA44,Tiptur,Karnataka,Tier3
+KA45,Hunsur,Karnataka,Tier3
+KA46,Sakleshpur,Karnataka,Tier3
+KA47,Honnavar,Karnataka,Tier3
+KA48,Jamkhandi,Karnataka,Tier3
+KA49,Gokak,Karnataka,Tier3
+KA50,Yelahanka,Karnataka,Metro
+KA52,Nelamangala,Karnataka,Metro
+KA54,Nagamangala,Karnataka,Tier3
+KA55,Mysuru East,Karnataka,Tier2
+KA56,Basavakalyan,Karnataka,Tier3
+KA57,Shantinagar,Karnataka,Metro
+KA58,Bantwal,Karnataka,Tier3
+KA59,Chandapura,Karnataka,Metro
+KA60,RTO RT Nagar,Karnataka,Metro
+KA61,Marathahalli,Karnataka,Metro
+KA62,Surathkal,Karnataka,Tier2
+KA63,Hubballi South,Karnataka,Tier2
+KA64,Madhugiri,Karnataka,Tier3
+KA65,Dandeli,Karnataka,Tier3
+KA66,Tarikere,Karnataka,Tier3
+KA67,Chintamani,Karnataka,Tier3
+MH51,Nashik,Maharashtra,Tier2
+MH52,Parbhani,Maharashtra,Tier3
+MH53,Pune South,Maharashtra,Metro
+PB03,Bathinda,Punjab,Tier2
+PB04,Faridkot,Punjab,Tier3
+PB05,Ferozepur,Punjab,Tier2
+PB06,Gurdaspur,Punjab,Tier3
+PB07,Hoshiarpur,Punjab,Tier2
+PB09,Kapurthala,Punjab,Tier3
+PB11,Patiala,Punjab,Tier2
+PB12,Ropar,Punjab,Tier3
+PB13,Sangrur,Punjab,Tier3
+PB14,Ajnala,Punjab,Tier3
+PB15,Abohar,Punjab,Tier3
+PB29,Moga,Punjab,Tier3
+PB30,Muktsar,Punjab,Tier3
+PB31,Mansa,Punjab,Tier3
+PB32,Nawanshahr,Punjab,Tier3
+PB46,Tarn Taran,Punjab,Tier3
+PB65,Mohali,Punjab,Tier2
+HR01,Ambala,Haryana,Tier2
+HR02,Jagadhri,Haryana,Tier3
+HR03,Panchkula,Haryana,Tier2
+HR04,Naraingarh,Haryana,Tier3
+HR07,Kurukshetra,Haryana,Tier3
+HR08,Kaithal,Haryana,Tier3
+HR09,Guhla,Haryana,Tier3
+HR10,Sonepat,Haryana,Tier2
+HR11,Gohana,Haryana,Tier3
+HR12,Rohtak,Haryana,Tier2
+HR13,Bahadurgarh,Haryana,Tier3
+HR14,Jhajjar,Haryana,Tier3
+HR15,Meham,Haryana,Tier3
+HR16,Bhiwani,Haryana,Tier3
+HR17,Charkhi Dadri,Haryana,Tier3
+HR18,Loharu,Haryana,Tier3
+HR19,Charkhi Dadri,Haryana,Tier3
+HR20,Hisar,Haryana,Tier2
+HR21,Hansi,Haryana,Tier3
+HR22,Fatehabad,Haryana,Tier3
+HR23,Tohana,Haryana,Tier3
+HR24,Sirsa,Haryana,Tier3
+HR25,Mandi Dabwali,Haryana,Tier3
+HR27,Nuh,Haryana,Tier3
+HR28,Narnaul,Haryana,Tier3
+HR30,Palwal,Haryana,Tier3
+HR31,Jind,Haryana,Tier3
+HR32,Narwana,Haryana,Tier3
+HR33,Safidon,Haryana,Tier3
+HR34,Mahendragarh,Haryana,Tier3
+HR35,Rewari,Haryana,Tier3
+HR36,Rewari,Haryana,Tier3
+HR51,Faridabad,Haryana,Tier2
+OR01,Balasore,Odisha,Tier3
+OR03,Bolangir,Odisha,Tier3
+OR04,Chandikhol,Odisha,Tier3
+OR06,Dhenkanal,Odisha,Tier3
+OR07,Ganjam,Odisha,Tier3
+OR08,Kalahandi,Odisha,Tier3
+OR10,Koraput,Odisha,Tier3
+OR11,Mayurbhanj,Odisha,Tier3
+OR12,Phulbani,Odisha,Tier3
+OR13,Puri,Odisha,Tier3
+OR14,Rourkela,Odisha,Tier2
+OR15,Sambalpur,Odisha,Tier3
+OR16,Sundergarh,Odisha,Tier3
+OR17,Baragarh,Odisha,Tier3
+OR18,Rayagada,Odisha,Tier3
+OR19,Angul,Odisha,Tier3
+OR21,Jagatsinghpur,Odisha,Tier3
+OR22,Bhadrak,Odisha,Tier3
+OR23,Jharsuguda,Odisha,Tier3
+OR24,Nabarangpur,Odisha,Tier3
+OR31,Subarnapur,Odisha,Tier3
+AS02,Nagaon,Assam,Tier3
+AS03,Jorhat,Assam,Tier3
+AS05,Golaghat,Assam,Tier3
+AS06,Dibrugarh,Assam,Tier3
+AS07,Lakhimpur,Assam,Tier3
+AS08,Dima Hasao,Assam,Tier3
+AS09,Karbi Anglong,Assam,Tier3
+AS10,Karimganj,Assam,Tier3
+AS12,Sonitpur,Assam,Tier3
+AS13,Darrang,Assam,Tier3
+AS14,Nalbari,Assam,Tier3
+AS15,Barpeta,Assam,Tier3
+AS16,Kokrajhar,Assam,Tier3
+AS17,Dhubri,Assam,Tier3
+AS18,Goalpara,Assam,Tier3
+AS19,Bongaigaon,Assam,Tier3
+AS20,Assam State Transport Corporation,Assam,Tier3
+AS25,Kamrup Rural,Assam,Tier3
+AS26,Chirang,Assam,Tier3
+AS27,Dhemaji,Assam,Tier3
+AS30,Hailakandi,Assam,Tier3
+BR12,Purnia,Bihar,Tier3
+BR22,Bettiah,Bihar,Tier3
+BR25,Jehanabad,Bihar,Tier3
+BR26,Aurangabad,Bihar,Tier3
+BR27,Nawada,Bihar,Tier3
+BR29,Siwan,Bihar,Tier3
+BR30,Sitamarhi,Bihar,Tier3
+BR31,Vaishali,Bihar,Tier3
+BR32,Madhubani,Bihar,Tier3
+BR34,Khagaria,Bihar,Tier3
+BR37,Kishanganj,Bihar,Tier3
+BR38,Araria,Bihar,Tier3
+BR39,Katihar,Bihar,Tier3
+BR43,Madhepura,Bihar,Tier3
+BR44,Buxar,Bihar,Tier3
+BR46,Jamui,Bihar,Tier3
+BR50,Supaul,Bihar,Tier3
+BR53,Lakhisarai,Bihar,Tier3
+AR01,Itanagar,Arunachal Pradesh,Tier3
+AR02,Itanagar,Arunachal Pradesh,Tier3
+AR03,Tawang,Arunachal Pradesh,Tier3
+AR04,Bomdila,Arunachal Pradesh,Tier3
+AR05,Seppa,Arunachal Pradesh,Tier3
+AR06,Ziro,Arunachal Pradesh,Tier3
+AR07,Daporijo,Arunachal Pradesh,Tier3
+AR08,Along,Arunachal Pradesh,Tier3
+AR09,Pasighat,Arunachal Pradesh,Tier3
+AR10,Anini,Arunachal Pradesh,Tier3
+AR11,Lohit,Arunachal Pradesh,Tier3
+AR12,Changlang,Arunachal Pradesh,Tier3
+AR13,Khonsa,Arunachal Pradesh,Tier3
+AR14,Yingkiong,Arunachal Pradesh,Tier3
+AR15,Koloriang,Arunachal Pradesh,Tier3
+AR16,Roing,Arunachal Pradesh,Tier3
+AR17,Hawai,Arunachal Pradesh,Tier3
+AR19,Namsai,Arunachal Pradesh,Tier3
+MN02,Churachandpur,Manipur,Tier3
+MN03,Kangpokpi,Manipur,Tier3
+MN04,Thoubal,Manipur,Tier3
+MN05,Bishnupur,Manipur,Tier3
+MN06,Chandel,Manipur,Tier3
+MN07,Ukhrul,Manipur,Tier3
+ML04,Jowai,Meghalaya,Tier3
+ML06,Nongstoin,Meghalaya,Tier3
+ML07,Williamnagar,Meghalaya,Tier3
+ML08,Tura,Meghalaya,Tier3
+ML09,Baghmara,Meghalaya,Tier3
+ML10,Nongpoh,Meghalaya,Tier3
+MZ02,Lunglei,Mizoram,Tier3
+MZ03,Saiha,Mizoram,Tier3
+MZ04,Champhai,Mizoram,Tier3
+MZ05,Kolasib,Mizoram,Tier3
+MZ06,Serchhip,Mizoram,Tier3
+MZ07,Lawngtlai,Mizoram,Tier3
+MZ08,Mamit,Mizoram,Tier3
+NL02,Mokokchung,Nagaland,Tier3
+NL03,Tuensang,Nagaland,Tier3
+NL04,Mon,Nagaland,Tier3
+NL05,Wokha,Nagaland,Tier3
+NL06,Zunheboto,Nagaland,Tier3
+NL07,Dimapur,Nagaland,Tier3
+NL08,Phek,Nagaland,Tier3
+SK01,Gangtok,Sikkim,Tier3
+SK02,Gyalshing,Sikkim,Tier3
+SK03,Mangan,Sikkim,Tier3
+SK04,Jorethang,Sikkim,Tier3
+SK05,Namchi,Sikkim,Tier3
+TR02,Kailashahar,Tripura,Tier3
+TR03,Udaipur,Tripura,Tier3
+TR04,Ambassa,Tripura,Tier3
+TR05,Dharmanagar,Tripura,Tier3
+TR06,Belonia,Tripura,Tier3
+TR07,Bishramganj,Tripura,Tier3
+TR08,Santirbazar,Tripura,Tier3
+WB05,Kolkata South,West Bengal,Metro
+WB06,Kolkata Central,West Bengal,Metro
+WB07,Bhowanipore,West Bengal,Metro
+WB15,Hooghly,West Bengal,Tier2
+WB16,Serampore,West Bengal,Tier3
+WB26,Contai,West Bengal,Tier3
+WB34,Purulia,West Bengal,Tier3
+WB44,Asansol South,West Bengal,Tier2
+WB50,Bishnupur,West Bengal,Tier3
+WB54,Krishnanagar,West Bengal,Tier3
+WB56,Kalyani,West Bengal,Tier3
+WB64,Balurghat,West Bengal,Tier3
+WB66,Raiganj,West Bengal,Tier3
+WB70,Jalpaiguri,West Bengal,Tier3
+WB72,Alipurduar,West Bengal,Tier3
+WB80,Kalimpong,West Bengal,Tier3
+RJ14,Jaipur South,Rajasthan,Tier2
+RJ45,Jaipur North,Rajasthan,Tier2
+RJ28,Baran,Rajasthan,Tier3
+RJ29,Dausa,Rajasthan,Tier3
+RJ30,Rajsamand,Rajasthan,Tier3
+RJ31,Hanumangarh,Rajasthan,Tier3
+RJ32,Kotputli,Rajasthan,Tier3
+RJ33,Ramganj Mandi,Rajasthan,Tier3
+RJ34,Karauli,Rajasthan,Tier3
+RJ35,Pratapgarh,Rajasthan,Tier3
+RJ36,Beawar,Rajasthan,Tier3
+RJ37,Didwana,Rajasthan,Tier3
+RJ38,Abu Road,Rajasthan,Tier3
+RJ39,Balotra,Rajasthan,Tier3
+RJ40,Bhiwadi,Rajasthan,Tier3
+RJ41,Chomu,Rajasthan,Tier3
+RJ42,Kishangarh,Rajasthan,Tier3
+RJ43,Phalodi,Rajasthan,Tier3
+RJ44,Sujangarh,Rajasthan,Tier3
+RJ46,Bhinmal,Rajasthan,Tier3
+RJ47,Dudu,Rajasthan,Tier3
+RJ48,Kekri,Rajasthan,Tier3
+RJ49,Nohar,Rajasthan,Tier3
+RJ50,Nokha,Rajasthan,Tier3
+RJ51,Shahpura,Rajasthan,Tier3
+RJ52,Anupgarh,Rajasthan,Tier3
+KA05,Bengaluru South,Karnataka,Metro
+KA70,Bantwal,Karnataka,Tier3
+KA71,Athani,Karnataka,Tier3
+KA73,Tumkuru,Karnataka,Tier3
+UP14,Ghaziabad,Uttar Pradesh,Tier2
+UP16,Noida,Uttar Pradesh,Tier2
+UP18,Budaun,Uttar Pradesh,Tier3
+UP19,Shamli,Uttar Pradesh,Tier3
+UP28,Ayodhya,Uttar Pradesh,Tier2
+UP29,Banda,Uttar Pradesh,Tier3
+UP32,Lucknow,Uttar Pradesh,Tier2
+UP38,Sambhal,Uttar Pradesh,Tier3
+UP39,Bahraich,Uttar Pradesh,Tier3
+UP40,Bahraich,Uttar Pradesh,Tier3
+UP48,Gonda,Uttar Pradesh,Tier3
+UP49,Kushinagar,Uttar Pradesh,Tier3
+UP53,Gorakhpur,Uttar Pradesh,Tier2
+UP59,Deoria,Uttar Pradesh,Tier3
+UP68,Bhadohi,Uttar Pradesh,Tier3
+UP69,Kanpur Dehat,Uttar Pradesh,Tier3
+UP77,Kanpur Dehat,Uttar Pradesh,Tier3
+UP78,Kanpur Nagar,Uttar Pradesh,Tier2
+UP90,Banda,Uttar Pradesh,Tier3
+UP91,Hamirpur,Uttar Pradesh,Tier3
+UP92,Jalaun,Uttar Pradesh,Tier3
+UP93,Jhansi,Uttar Pradesh,Tier2
+UP94,Lalitpur,Uttar Pradesh,Tier3
+UP95,Mahoba,Uttar Pradesh,Tier3
+UP96,Chitrakoot,Uttar Pradesh,Tier3
+MP04,Bhopal,Madhya Pradesh,Tier2
+MP09,Indore,Madhya Pradesh,Tier2
+MP23,Raipur,Madhya Pradesh,Tier2
+MP24,Durg,Madhya Pradesh,Tier2
+MP25,Jagdalpur,Madhya Pradesh,Tier3
+MP26,Bilaspur,Madhya Pradesh,Tier3
+MP27,Ambikapur,Madhya Pradesh,Tier3
+MP28,Chhindwara,Madhya Pradesh,Tier3
+MP29,Rajnandgaon,Madhya Pradesh,Tier3
+MP30,Bhind,Madhya Pradesh,Tier3
+MP31,Sheopur,Madhya Pradesh,Tier3
+MP32,Datia,Madhya Pradesh,Tier3
+MP33,Shivpuri,Madhya Pradesh,Tier3
+MP34,Damoh,Madhya Pradesh,Tier3
+MP35,Panna,Madhya Pradesh,Tier3
+MP36,Tikamgarh,Madhya Pradesh,Tier3
+MP37,Sehore,Madhya Pradesh,Tier3
+MP38,Raisen,Madhya Pradesh,Tier3
+MP40,Vidisha,Madhya Pradesh,Tier3
+MP42,Shajapur,Madhya Pradesh,Tier3
+MP45,Jhabua,Madhya Pradesh,Tier3
+MP46,Barwani,Madhya Pradesh,Tier3
+MP47,Harda,Madhya Pradesh,Tier3
+MP48,Betul,Madhya Pradesh,Tier3
+MP49,Narsinghpur,Madhya Pradesh,Tier3
+MP52,Dindori,Madhya Pradesh,Tier3
+MP54,Umaria,Madhya Pradesh,Tier3
+MP65,Anuppur,Madhya Pradesh,Tier3
+MP66,Singrauli,Madhya Pradesh,Tier3
+MP67,Ashoknagar,Madhya Pradesh,Tier3
+MP68,Burhanpur,Madhya Pradesh,Tier3
+MP69,Alirajpur,Madhya Pradesh,Tier3
+MP70,Agar Malwa,Madhya Pradesh,Tier3
+GJ31,Arvalli,Gujarat,Tier3
+GJ32,Gir Somnath,Gujarat,Tier3
+GJ33,Botad,Gujarat,Tier3
+GJ34,Chhota Udaipur,Gujarat,Tier3
+GJ35,Mahisagar,Gujarat,Tier3
+GJ36,Morbi,Gujarat,Tier3
+GJ37,Devbhoomi Dwarka,Gujarat,Tier3
+GJ38,Bavla,Gujarat,Tier3
+KL61,Kunnathur,Kerala,Tier3
+KL62,Ranni,Kerala,Tier3
+KL63,Angamaly,Kerala,Tier3
+KL64,Chalakkudy,Kerala,Tier3
+KL65,Thirurangadi,Kerala,Tier3
+KL66,Kuttanadu,Kerala,Tier3
+KL67,Uzhavoor,Kerala,Tier3
+KL68,Devikulam,Kerala,Tier3
+KL69,Udumbanchola,Kerala,Tier3
+KL70,Chittur,Kerala,Tier3
+KL71,Nilambur,Kerala,Tier3
+KL72,Mananthavady,Kerala,Tier3
+KL73,Sulthan Bathery,Kerala,Tier3
+KL74,Kattappana,Kerala,Tier3
+KL75,Thriprayar,Kerala,Tier3
+KL76,Nanmanda,Kerala,Tier3
+KL77,Perambra,Kerala,Tier3
+KL78,Iritty,Kerala,Tier3
+KL79,Vellarikundu,Kerala,Tier3
+KL80,Kothamangalam,Kerala,Tier3
+KL81,Varkala,Kerala,Tier3
+KL82,Chadayamangalam,Kerala,Tier3
+KL83,Konni,Kerala,Tier3
+KL84,Malliassery,Kerala,Tier3
+KL85,Ramanattukara,Kerala,Tier3
+KL86,Payyannur,Kerala,Tier3
+TN08,K.K. Nagar Chennai,Tamil Nadu,Metro
+TN17,Ulundurpet,Tamil Nadu,Tier3
+TN27,Salem Central,Tamil Nadu,Tier2
+TN35,Gobi,Tamil Nadu,Tier3
+TN53,Dharmapuri,Tamil Nadu,Tier3
+TN71,Tirunelveli,Tamil Nadu,Tier2
+TN80,Tiruchirappalli,Tamil Nadu,Tier2
+UP01,Almora,Uttar Pradesh,Tier3
+UP02,Haldwani,Uttar Pradesh,Tier3
+UP03,Pithoragarh,Uttar Pradesh,Tier3
+UP04,Roorkee,Uttar Pradesh,Tier3
+UP05,Kotdwar,Uttar Pradesh,Tier3
+UP06,Kauria,Uttar Pradesh,Tier3
+UP07,Dehradun,Uttar Pradesh,Tier2
+UP08,Haridwar,Uttar Pradesh,Tier3
+UP09,Tehri,Uttar Pradesh,Tier3
+UP10,Uttarkashi,Uttar Pradesh,Tier3
+CG01,Governor of Chhattisgarh,Chhattisgarh,Tier2
+CG02,Government of Chhattisgarh,Chhattisgarh,Tier2
+CG03,Chhattisgarh Police,Chhattisgarh,Tier2
+CG05,Dhamtari,Chhattisgarh,Tier3
+CG06,Mahasamund,Chhattisgarh,Tier3
+CG09,Kawardha,Chhattisgarh,Tier3
+CG14,Jashpur,Chhattisgarh,Tier3
+CG16,Koriya,Chhattisgarh,Tier3
+CG18,Dantewada,Chhattisgarh,Tier3
+CG19,Kanker,Chhattisgarh,Tier3
+CG20,Bijapur,Chhattisgarh,Tier3
+CG21,Narayanpur,Chhattisgarh,Tier3
+CG22,Baloda Bazar,Chhattisgarh,Tier3
+CG23,Gariaband,Chhattisgarh,Tier3
+CG24,Balod,Chhattisgarh,Tier3
+CG25,Bemetara,Chhattisgarh,Tier3
+CG26,Sukma,Chhattisgarh,Tier3
+CG27,Kondagaon,Chhattisgarh,Tier3
+CG28,Mungeli,Chhattisgarh,Tier3
+CG30,Sarangarh-Bilaigarh,Chhattisgarh,Tier3
+UK09,Tehri Garhwal,Uttarakhand,Tier3
+UK10,Uttarkashi,Uttarakhand,Tier3
+UK12,Pauri Garhwal,Uttarakhand,Tier3
+UK13,Rudraprayag,Uttarakhand,Tier3
+UK15,Kotdwar,Uttarakhand,Tier3
+UK16,Vikasnagar,Uttarakhand,Tier3
+UK18,Kashipur,Uttarakhand,Tier3
+UK19,Ramnagar,Uttarakhand,Tier3
+UK20,Haldwani,Uttarakhand,Tier3
+HP04,Kangra,Himachal Pradesh,Tier3
+HP05,Mandi,Himachal Pradesh,Tier3
+HP06,Rampur Bushahr,Himachal Pradesh,Tier3
+HP07,Shimla,Himachal Pradesh,Tier3
+HP08,Chaupal,Himachal Pradesh,Tier3
+HP09,Theog,Himachal Pradesh,Tier3
+HP10,Rohru,Himachal Pradesh,Tier3
+HP11,Arki,Himachal Pradesh,Tier3
+HP12,Nalagarh,Himachal Pradesh,Tier3
+HP13,Kandaghat,Himachal Pradesh,Tier3
+HP15,Parwanoo,Himachal Pradesh,Tier3
+HP16,Rajgarh,Himachal Pradesh,Tier3
+HP17,Paonta Sahib,Himachal Pradesh,Tier3
+HP18,Nahan,Himachal Pradesh,Tier3
+HP19,Amb,Himachal Pradesh,Tier3
+HP20,Una,Himachal Pradesh,Tier3
+HP21,Barsar,Himachal Pradesh,Tier3
+HP22,Hamirpur,Himachal Pradesh,Tier3
+HP23,Ghumarwin,Himachal Pradesh,Tier3
+HP24,Bilaspur,Himachal Pradesh,Tier3
+HP25,Kalpa,Himachal Pradesh,Tier3
+HP26,Nichar,Himachal Pradesh,Tier3
+HP27,Poo,Himachal Pradesh,Tier3
+HP28,Sarkaghat,Himachal Pradesh,Tier3
+HP29,Jogindernagar,Himachal Pradesh,Tier3
+HP30,Karsog,Himachal Pradesh,Tier3
+HP31,Sundernagar,Himachal Pradesh,Tier3
+HP32,Gohar,Himachal Pradesh,Tier3
+HP34,Kullu,Himachal Pradesh,Tier3
+HP35,Anni,Himachal Pradesh,Tier3
+HP36,Dehra,Himachal Pradesh,Tier3
+HP38,Nurpur,Himachal Pradesh,Tier3
+HP41,Kaza,Himachal Pradesh,Tier3
+HP42,Keylong,Himachal Pradesh,Tier3
+HP43,Udaipur,Himachal Pradesh,Tier3
+HP44,Churah,Himachal Pradesh,Tier3
+HP45,Pangi,Himachal Pradesh,Tier3
+HP46,Bharmour,Himachal Pradesh,Tier3
+HP47,Dalhousie,Himachal Pradesh,Tier3
+HP48,Chamba,Himachal Pradesh,Tier3
+HP49,Banjar,Himachal Pradesh,Tier3
+HP50,Shimla Auto Rikshaw,Himachal Pradesh,Tier3
+HP51,Shimla Rural,Himachal Pradesh,Tier3
+HP52,Shimla Urban,Himachal Pradesh,Tier3
+HP53,Baijnath,Himachal Pradesh,Tier3
+HP54,Jawali,Himachal Pradesh,Tier3
+HP55,Nadaun,Himachal Pradesh,Tier3
+HP56,Jaisinghpur,Himachal Pradesh,Tier3
+HP58,Manali,Himachal Pradesh,Tier3
+HP62,Dodra Kawar,Himachal Pradesh,Tier3
+HP63,Shimla (commercial),Himachal Pradesh,Tier3
+HP64,Solan (commercial),Himachal Pradesh,Tier3
+HP65,Mandi (commercial),Himachal Pradesh,Tier3
+HP66,Kullu (commercial),Himachal Pradesh,Tier3
+HP67,Hamirpur (commercial),Himachal Pradesh,Tier3
+HP68,Kangra (commercial),Himachal Pradesh,Tier3
+HP69,Bilaspur (commercial),Himachal Pradesh,Tier3
+HP71,Nahan (commercial),Himachal Pradesh,Tier3
+HP72,Una (commercial),Himachal Pradesh,Tier3
+HP73,Chamba (commercial),Himachal Pradesh,Tier3
+PB16,Anandpur Sahib,Punjab,Tier3
+PB17,Baba Bakala,Punjab,Tier3
+PB18,Batala,Punjab,Tier3
+PB19,Garhshankar,Punjab,Tier3
+PB20,Giddarbaha,Punjab,Tier3
+PB21,Dasuya,Punjab,Tier3
+PB22,Fazilka,Punjab,Tier3
+PB23,Faridkot,Punjab,Tier3
+PB24,Garhshankar,Punjab,Tier3
+PB25,Jagraon,Punjab,Tier3
+PB26,Khanna,Punjab,Tier3
+PB27,Kharar,Punjab,Tier3
+PB28,Malerkotla,Punjab,Tier3
+PB33,Nakodar,Punjab,Tier3
+PB34,Nabha,Punjab,Tier3
+PB35,Pathankot,Punjab,Tier3
+PB36,Phagwara,Punjab,Tier3
+PB37,Phillaur,Punjab,Tier3
+PB38,Patti,Punjab,Tier3
+PB39,Rajpura,Punjab,Tier3
+PB40,Rampura Phul,Punjab,Tier3
+PB41,Sultanpur Lodhi,Punjab,Tier3
+PB42,Samana,Punjab,Tier3
+PB43,Samrala,Punjab,Tier3
+PB44,Sunam,Punjab,Tier3
+PB45,Talwandi Sabo,Punjab,Tier3
+PB47,Zira,Punjab,Tier3
+PB48,Amloh,Punjab,Tier3
+PB49,Khamano,Punjab,Tier3
+PB50,Fazilka,Punjab,Tier3
+PB51,Jalalabad,Punjab,Tier3
+PB52,Bassi Pathana,Punjab,Tier3
+PB53,Malout,Punjab,Tier3
+PB54,Mukerian,Punjab,Tier3
+PB55,Payal,Punjab,Tier3
+PB56,Raikot,Punjab,Tier3
+PB57,Bhulath,Punjab,Tier3
+PB58,Dera Baba Nanak,Punjab,Tier3
+PB59,Dhuri,Punjab,Tier3
+PB61,Jalalabad,Punjab,Tier3
+PB62,Jaitu,Punjab,Tier3
+PB63,Khadoor Sahib,Punjab,Tier3
+PB64,Moonak,Punjab,Tier3
+PB66,Nihal Singh Wala,Punjab,Tier3
+PB67,Shahkot,Punjab,Tier3
+PB68,Dhar Kalan,Punjab,Tier3
+PB69,Bagha Purana,Punjab,Tier3
+PB70,Dera Bassi,Punjab,Tier3
+PB71,Chamkaur Sahib,Punjab,Tier3
+PB72,Pattran,Punjab,Tier3
+PB73,Tappa Mandi,Punjab,Tier3
+PB74,Nangal,Punjab,Tier3
+PB75,Zirakpur,Punjab,Tier3
+PB76,Ahmedgarh,Punjab,Tier3
+HR52,Hodal,Haryana,Tier3
+HR53,Adampur,Haryana,Tier3
+HR54,Barara,Haryana,Tier3
+HR55,Tohana,Haryana,Tier3
+HR56,Jind,Haryana,Tier3
+HR57,Sirsa,Haryana,Tier3
+HR58,Jagadhri,Haryana,Tier3
+HR59,Ratia,Haryana,Tier3
+HR60,Samalkha,Haryana,Tier3
+HR61,Bhiwani,Haryana,Tier3
+HR62,Fatehabad,Haryana,Tier3
+HR63,Jhajjar,Haryana,Tier3
+HR64,Kaithal,Haryana,Tier3
+HR65,Kurukshetra,Haryana,Tier3
+HR66,Narnaul,Haryana,Tier3
+HR67,Panipat,Haryana,Tier3
+HR68,Panchkula,Haryana,Tier3
+HR69,Sonipat,Haryana,Tier3
+HR70,Chandigarh,Haryana,Tier3
+HR71,Bilaspur,Haryana,Tier3
+HR72,Hodal,Haryana,Tier3
+HR73,Palwal,Haryana,Tier3
+HR74,Mewat,Haryana,Tier3
+HR75,Indri,Haryana,Tier3
+HR76,Pataudi,Haryana,Tier3
+HR77,Beri,Haryana,Tier3
+HR78,Sahabad,Haryana,Tier3
+HR79,Kharkhoda,Haryana,Tier3
+HR80,Barwala,Haryana,Tier3
+HR81,Bawal,Haryana,Tier3
+HR82,Kanina,Haryana,Tier3
+HR83,Kalayat,Haryana,Tier3
+HR84,Charkhi Dadri,Haryana,Tier3
+HR85,Karnal,Haryana,Tier3
+HR86,Sonipat,Haryana,Tier3
+HR87,Bhiwani,Haryana,Tier3
+HR88,Badhra,Haryana,Tier3
+HR89,Farukhnagar,Haryana,Tier3
+HR90,Uchana,Haryana,Tier3
+HR91,Gharaunda,Haryana,Tier3
+HR92,Radaur,Haryana,Tier3
+HR93,Narnaund,Haryana,Tier3
+HR94,Hansi,Haryana,Tier3
+HR95,Sampla,Haryana,Tier3
+HR96,Tauru,Haryana,Tier3
+HR97,Ladwa,Haryana,Tier3
+HR98,Badli,Haryana,Tier3
+HR99,Panchkula (Commercial),Haryana,Tier3
+TN100,Coimbatore South,Tamil Nadu,Tier2
+TN101,Tiruppur North,Tamil Nadu,Tier2
+TN102,Erode East,Tamil Nadu,Tier2
+TN103,Salem West,Tamil Nadu,Tier2
+TN104,Madurai South,Tamil Nadu,Tier2
+TN105,Tirunelveli East,Tamil Nadu,Tier2
+TN106,Thoothukudi Rural,Tamil Nadu,Tier2
+TN107,Vellore West,Tamil Nadu,Tier2
+TN108,Kanchipuram North,Tamil Nadu,Tier2
+TN109,Chengalpattu Rural,Tamil Nadu,Tier3
+UP97,Agra (Commercial),Uttar Pradesh,Tier2
+UP98,Lucknow (Commercial),Uttar Pradesh,Tier2
+UP99,Kanpur (Commercial),Uttar Pradesh,Tier2
+MH54,Pune Rural,Maharashtra,Tier3
+MH55,Solapur Rural,Maharashtra,Tier3
+MH56,Nashik Rural,Maharashtra,Tier3
+MH57,Aurangabad Rural,Maharashtra,Tier3
+MH58,Amravati Rural,Maharashtra,Tier3
+MH59,Nagpur Rural,Maharashtra,Tier3
+MH60,Kolhapur Rural,Maharashtra,Tier3

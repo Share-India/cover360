@@ -1,8 +1,9 @@
-// Use the same host the app was opened on, so it also works from a phone on the same Wi-Fi
-// (127.0.0.1 would point at the phone itself). The backend listens on all interfaces.
-const API_BASE_URL = typeof window !== 'undefined'
+// In deployment set NEXT_PUBLIC_API_URL (e.g. https://api.example.com/api) at build time.
+// Otherwise use the same host the app was opened on with the backend port, so it also works
+// from a phone on the same Wi-Fi (127.0.0.1 would point at the phone itself).
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined'
   ? `http://${window.location.hostname}:5000/api`
-  : 'http://127.0.0.1:5000/api';
+  : 'http://127.0.0.1:5000/api');
 
 /**
  * Helper to construct headers, adding Authorization only if a JWT token is present.

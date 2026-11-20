@@ -17,8 +17,3 @@ backend/instance/
 
 # editor
 .vscode/
-
-# one-off dev scratch scripts and archives in the repo root
-/*.py
-/page_backup.js
-/*.zip

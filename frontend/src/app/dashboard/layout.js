@@ -174,7 +174,7 @@ export default function DashboardLayout({ children }) {
           
           {/* Footer inside main content scroll area */}
           <footer className="py-6 px-4 sm:px-10 text-xs text-gray-400 flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center border-t border-gray-200/60 mt-auto">
-            <div><strong className="text-gray-700">Cover360</strong> © 2024 ShareIndia Cover360. All rights reserved.</div>
+            <div><strong className="text-gray-700">Cover360</strong> © 2026 ShareIndia Cover360. All rights reserved.</div>
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               <a href="#" className="hover:text-gray-600">Privacy Policy</a>
               <a href="#" className="hover:text-gray-600">Terms of Service</a>

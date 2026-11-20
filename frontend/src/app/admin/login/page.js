@@ -159,7 +159,7 @@ export default function AdminLogin() {
           </div>
           <footer className="mt-xl text-center">
             <p className="text-label-sm text-outline">
-              © 2024 ShareIndia Cover360. All rights reserved.
+              © 2026 ShareIndia Cover360. All rights reserved.
             </p>
           </footer>
         </div>

@@ -9,7 +9,7 @@ export default function AdminLogin() {
   const [isFocused, setIsFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
   
-  const [email, setEmail] = useState('');
+  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -22,7 +22,7 @@ export default function AdminLogin() {
     setLoading(true);
     
     try {
-      await adminLoginUser(email, password);
+      await adminLoginUser(identifier, password);
       router.push('/dashboard');
     } catch (err) {
       setError(err.message || 'Login failed. Please check your credentials.');
@@ -96,19 +96,20 @@ export default function AdminLogin() {
 
           <form action="#" className="space-y-lg" method="POST" onSubmit={handleLogin}>
             <div className={`space-y-xs glass-panel transition-all duration-300 ${isFocused ? 'shadow-xl shadow-primary/10' : ''}`} style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
-              <label className="text-label-lg font-label-lg text-on-background flex items-center gap-xs" htmlFor="email">
-                <span className="material-symbols-outlined text-[18px] text-primary">mail</span>
-                Email Address
+              <label className="text-label-lg font-label-lg text-on-background flex items-center gap-xs" htmlFor="identifier">
+                <span className="material-symbols-outlined text-[18px] text-primary">person</span>
+                Email or Mobile Number
               </label>
               <input 
                 className="w-full px-md py-sm bg-surface-container-low border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none" 
-                id="email" 
-                name="email" 
-                placeholder="admin@company.com" 
+                id="identifier" 
+                name="identifier" 
+                placeholder="Email or 10-digit mobile" 
                 required 
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                autoComplete="username"
+                value={identifier}
+                onChange={(e) => setIdentifier(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
               />

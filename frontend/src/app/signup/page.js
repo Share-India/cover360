@@ -1,38 +1,103 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { signupUser } from '../../utils/api';
+import { sendSignupOtp, signupUser } from '../../utils/api';
+
+const INPUT = "w-full px-md py-sm bg-surface-container-low border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none";
+const LABEL = "text-label-lg font-label-lg text-on-background flex items-center gap-xs";
 
 export default function Signup() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const [passwordFocused, setPasswordFocused] = useState(false);
-  const [nameFocused, setNameFocused] = useState(false);
-  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [otp, setOtp] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  const [otpSent, setOtpSent] = useState(false);
+  const [sendingOtp, setSendingOtp] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  
+  const [info, setInfo] = useState('');
+
   const router = useRouter();
+
+  // Count down the "resend OTP" timer
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const t = setTimeout(() => setCooldown((c) => c - 1), 1000);
+    return () => clearTimeout(t);
+  }, [cooldown]);
+
+  const mobileValid = /^[6-9]\d{9}$/.test(mobile);
+  const emailValid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+
+  const handleSendOtp = async () => {
+    setError('');
+    setInfo('');
+    if (!mobileValid) {
+      setError('Enter a valid 10-digit mobile number.');
+      return;
+    }
+    if (!emailValid) {
+      setError('Enter your email address first.');
+      return;
+    }
+    setSendingOtp(true);
+    try {
+      await sendSignupOtp(mobile, email);
+      setOtpSent(true);
+      setOtp('');
+      setCooldown(30);
+      setInfo(`OTP sent to +91 ${mobile}. It is valid for 10 minutes.`);
+    } catch (err) {
+      if (err.retryAfter) setCooldown(err.retryAfter);
+      setError(err.message || 'Could not send the OTP.');
+    } finally {
+      setSendingOtp(false);
+    }
+  };
 
   const handleSignup = async (e) => {
     e.preventDefault();
     setError('');
+    setInfo('');
+
+    if (!name.trim()) return setError('Enter your full name.');
+    if (!emailValid) return setError('Enter a valid email address.');
+    if (!mobileValid) return setError('Enter a valid 10-digit mobile number.');
+    if (!otpSent) return setError('Click "Send OTP" to verify your mobile number.');
+    if (!/^\d{6}$/.test(otp)) return setError('Enter the 6-digit OTP.');
+    if (password.length < 8 || !/[A-Za-z]/.test(password) || !/\d/.test(password)) {
+      return setError('Password must be at least 8 characters with a letter and a number.');
+    }
+    if (password !== confirmPassword) return setError('Password and confirm password do not match.');
+
     setLoading(true);
-    
     try {
-      await signupUser(name, email, password);
-      // On success, redirect to login
-      router.push('/login');
+      await signupUser({ fullName: name.trim(), email, mobile, otp, password, confirmPassword });
+      router.push('/login?registered=1');
     } catch (err) {
       setError(err.message || 'Signup failed. Please try again.');
     } finally {
       setLoading(false);
     }
   };
+
+  const eyeButton = (shown, toggle) => (
+    <button
+      className="absolute right-md top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant flex items-center"
+      type="button"
+      aria-label={shown ? 'Hide password' : 'Show password'}
+      onClick={toggle}
+    >
+      <span className="material-symbols-outlined text-[20px]">{shown ? 'visibility_off' : 'visibility'}</span>
+    </button>
+  );
 
   return (
     <main className="flex flex-col md:flex-row w-full min-h-dvh">
@@ -89,79 +154,101 @@ export default function Signup() {
               {error}
             </div>
           )}
+          {info && !error && (
+            <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm border border-green-200">
+              {info}
+            </div>
+          )}
 
-          <form action="#" className="space-y-lg" method="POST" onSubmit={handleSignup}>
-            <div className={`space-y-xs glass-panel transition-all duration-300 ${nameFocused ? 'shadow-xl shadow-primary/10' : ''}`} style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
-              <label className="text-label-lg font-label-lg text-on-background flex items-center gap-xs" htmlFor="name">
+          <form className="space-y-md" onSubmit={handleSignup} noValidate>
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="name">
                 <span className="material-symbols-outlined text-[18px] text-primary">person</span>
                 Full Name
               </label>
-              <input 
-                className="w-full px-md py-sm bg-surface-container-low border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none" 
-                id="name" 
-                name="name" 
-                placeholder="John Doe" 
-                required 
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                onFocus={() => setNameFocused(true)}
-                onBlur={() => setNameFocused(false)}
-              />
+              <input className={INPUT} id="name" name="name" placeholder="John Doe" autoComplete="name" type="text"
+                value={name} onChange={(e) => setName(e.target.value)} />
             </div>
-            <div className={`space-y-xs glass-panel transition-all duration-300 ${isFocused ? 'shadow-xl shadow-primary/10' : ''}`} style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
-              <label className="text-label-lg font-label-lg text-on-background flex items-center gap-xs" htmlFor="email">
+
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="email">
                 <span className="material-symbols-outlined text-[18px] text-primary">mail</span>
                 Email Address
               </label>
-              <input 
-                className="w-full px-md py-sm bg-surface-container-low border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none" 
-                id="email" 
-                name="email" 
-                placeholder="name@company.com" 
-                required 
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-              />
+              <input className={INPUT} id="email" name="email" placeholder="name@company.com" autoComplete="email" type="email"
+                value={email} onChange={(e) => setEmail(e.target.value.trim())} />
             </div>
-            <div className={`space-y-xs glass-panel transition-all duration-300 ${passwordFocused ? 'shadow-xl shadow-primary/10' : ''}`} style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
-              <div className="flex justify-between items-center">
-                <label className="text-label-lg font-label-lg text-on-background flex items-center gap-xs" htmlFor="password">
-                  <span className="material-symbols-outlined text-[18px] text-primary">lock</span>
-                  Password
-                </label>
-              </div>
-              <div className="relative">
-                <input 
-                  className="w-full px-md py-sm bg-surface-container-low border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all outline-none" 
-                  id="password" 
-                  name="password" 
-                  placeholder="••••••••" 
-                  required 
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  onFocus={() => setPasswordFocused(true)}
-                  onBlur={() => setPasswordFocused(false)}
-                />
-                <button 
-                  className="absolute right-md top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant flex items-center" 
+
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="mobile">
+                <span className="material-symbols-outlined text-[18px] text-primary">call</span>
+                Mobile Number
+              </label>
+              <div className="flex gap-sm">
+                <div className="relative flex-1">
+                  <span className="absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant text-body-md">+91</span>
+                  <input className={`${INPUT} pl-[3.25rem]`} id="mobile" name="mobile" placeholder="10-digit number"
+                    inputMode="numeric" autoComplete="tel-national" maxLength={10} type="tel"
+                    value={mobile} onChange={(e) => setMobile(e.target.value.replace(/\D/g, '').slice(0, 10))} />
+                </div>
+                <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={handleSendOtp}
+                  disabled={sendingOtp || cooldown > 0}
+                  className="px-md py-sm rounded-lg border border-primary text-primary font-label-lg whitespace-nowrap hover:bg-primary/5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span className="material-symbols-outlined text-[20px]">{showPassword ? 'visibility_off' : 'visibility'}</span>
+                  {sendingOtp ? 'Sending...' : cooldown > 0 ? `Resend in ${cooldown}s` : otpSent ? 'Resend OTP' : 'Send OTP'}
                 </button>
               </div>
             </div>
-            <button 
+
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="otp">
+                <span className="material-symbols-outlined text-[18px] text-primary">pin</span>
+                OTP
+              </label>
+              <input className={`${INPUT} tracking-[0.4em] disabled:opacity-60`} id="otp" name="otp"
+                placeholder={otpSent ? '6-digit OTP' : 'Send OTP to enter it here'}
+                inputMode="numeric" autoComplete="one-time-code" maxLength={6} type="text" disabled={!otpSent}
+                value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} />
+            </div>
+
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="password">
+                <span className="material-symbols-outlined text-[18px] text-primary">lock</span>
+                Password
+              </label>
+              <div className="relative">
+                <input className={INPUT} id="password" name="password" placeholder="At least 8 characters"
+                  autoComplete="new-password" type={showPassword ? 'text' : 'password'}
+                  value={password} onChange={(e) => setPassword(e.target.value)} />
+                {eyeButton(showPassword, () => setShowPassword(!showPassword))}
+              </div>
+              <p className="text-label-sm text-outline">Use 8+ characters with at least one letter and one number.</p>
+            </div>
+
+            <div className="space-y-xs">
+              <label className={LABEL} htmlFor="confirmPassword">
+                <span className="material-symbols-outlined text-[18px] text-primary">lock_reset</span>
+                Confirm Password
+              </label>
+              <div className="relative">
+                <input className={INPUT} id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password"
+                  autoComplete="new-password" type={showConfirm ? 'text' : 'password'}
+                  value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                {eyeButton(showConfirm, () => setShowConfirm(!showConfirm))}
+              </div>
+              {confirmPassword && password !== confirmPassword && (
+                <p className="text-label-sm text-red-600">Passwords do not match.</p>
+              )}
+            </div>
+
+            <button
               disabled={loading}
-              className="btn-hover-effect w-full bg-primary-container text-white font-label-lg py-md rounded-lg flex items-center justify-center gap-xs shadow-lg shadow-primary-container/20 hover:bg-primary-container/90 transition-all disabled:opacity-70" 
+              className="btn-hover-effect w-full bg-primary-container text-white font-label-lg py-md rounded-lg flex items-center justify-center gap-xs shadow-lg shadow-primary-container/20 hover:bg-primary-container/90 transition-all disabled:opacity-70"
               type="submit"
             >
-              {loading ? 'Signing Up...' : 'Sign Up'}
+              {loading ? 'Creating account...' : 'Create Account'}
               {!loading && <span className="material-symbols-outlined text-[20px]">arrow_forward</span>}
             </button>
           </form>

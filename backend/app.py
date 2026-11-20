@@ -14,8 +14,13 @@ from functools import wraps
 from datetime import datetime, timedelta
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import re
+import hmac
+import hashlib
+import secrets
+import sms
 import kyc_utils
-from models import db, User, Policy, Recommend 
+from models import db, User, Policy, Recommend, OtpRequest
 
 # Load environment variables
 load_dotenv(override=True)
@@ -158,53 +163,153 @@ def issue_token(user):
     }, app.config['SECRET_KEY'], algorithm="HS256")
 
 # Auth Endpoints
+OTP_EXPIRY_MINUTES = 10
+OTP_RESEND_SECONDS = 30
+OTP_MAX_PER_HOUR = 5
+OTP_MAX_ATTEMPTS = 5
+
+
+def _hash_otp(mobile, otp):
+    return hmac.new(app.config['SECRET_KEY'].encode(), f"{mobile}:{otp}".encode(), hashlib.sha256).hexdigest()
+
+
+def _valid_mobile(value):
+    """10-digit Indian mobile number (starts with 6-9), or None."""
+    m = kyc_utils.normalize_mobile(value)
+    return m if m and m[0] in '6789' else None
+
+
+def _password_problem(password, confirm):
+    if len(password) < 8:
+        return 'Password must be at least 8 characters.'
+    if not re.search(r'[A-Za-z]', password) or not re.search(r'\d', password):
+        return 'Password must contain at least one letter and one number.'
+    if password != confirm:
+        return 'Password and confirm password do not match.'
+    return None
+
+
+@app.route('/api/auth/send-otp', methods=['POST'])
+def send_signup_otp():
+    """Step 1 of sign-up: text a one-time password to the mobile number."""
+    data = request.get_json(silent=True) or {}
+    mobile = _valid_mobile(data.get('mobile'))
+    if not mobile:
+        return jsonify({'error': 'Enter a valid 10-digit mobile number.'}), 400
+
+    email = kyc_utils.normalize_email(data.get('email')) if data.get('email') else None
+    if email and User.query.filter(db.func.lower(User.email) == email).first():
+        return jsonify({'error': 'An account with this email already exists. Please sign in.'}), 409
+    if User.query.filter_by(mobile=mobile).first():
+        return jsonify({'error': 'An account with this mobile number already exists. Please sign in.'}), 409
+
+    now = datetime.utcnow()
+    last = OtpRequest.query.filter_by(mobile=mobile).order_by(OtpRequest.created_at.desc()).first()
+    if last and (now - last.created_at).total_seconds() < OTP_RESEND_SECONDS:
+        wait = int(OTP_RESEND_SECONDS - (now - last.created_at).total_seconds()) + 1
+        return jsonify({'error': f'Please wait {wait} seconds before requesting another OTP.', 'retryAfter': wait}), 429
+    recent = OtpRequest.query.filter(OtpRequest.mobile == mobile, OtpRequest.created_at > now - timedelta(hours=1)).count()
+    if recent >= OTP_MAX_PER_HOUR:
+        return jsonify({'error': 'Too many OTP requests. Please try again after an hour.'}), 429
+
+    otp = f"{secrets.randbelow(1000000):06d}"
+    OtpRequest.query.filter_by(mobile=mobile, used=False).update({'used': True})
+    row = OtpRequest(mobile=mobile, otp_hash=_hash_otp(mobile, otp), expires_at=now + timedelta(minutes=OTP_EXPIRY_MINUTES))
+    db.session.add(row)
+    db.session.commit()
+
+    try:
+        sms.send_otp(mobile, otp, OTP_EXPIRY_MINUTES)
+    except sms.SmsError as e:
+        logger.error(f"OTP SMS failed for {mobile}: {e}")
+        row.used = True
+        db.session.commit()
+        return jsonify({'error': 'Could not send the OTP right now. Please try again shortly.'}), 503
+
+    return jsonify({'message': 'OTP sent to your mobile number.', 'expiresInMinutes': OTP_EXPIRY_MINUTES, 'resendAfter': OTP_RESEND_SECONDS})
+
+
 @app.route('/api/auth/signup', methods=['POST'])
 def signup():
+    """Step 2 of sign-up: name, email, mobile, OTP, password and confirm password."""
     try:
-        data = request.get_json()
-        logger.info(f"Signup attempt for email: {data.get('email')}")
-        
-        if not data or not data.get('email') or not data.get('password') or not data.get('fullName'):
-            logger.warning("Signup failed: Missing required fields")
-            return jsonify({'error': 'Missing required fields'}), 400
-            
-        if User.query.filter_by(email=data['email']).first():
-            logger.warning(f"Signup failed: User already exists with email {data['email']}")
-            return jsonify({'error': 'User already exists with this email'}), 409
-            
-        hashed_password = generate_password_hash(data['password'], method='pbkdf2:sha256')
-        
+        data = request.get_json(silent=True) or {}
+        name = (data.get('fullName') or '').strip()
+        email = kyc_utils.normalize_email(data.get('email'))
+        mobile = _valid_mobile(data.get('mobile'))
+        otp = re.sub(r'\D', '', str(data.get('otp') or ''))
+        password = data.get('password') or ''
+        confirm = data.get('confirmPassword') or ''
+
+        if not name:
+            return jsonify({'error': 'Full name is required.'}), 400
+        if not email:
+            return jsonify({'error': 'Enter a valid email address.'}), 400
+        if not mobile:
+            return jsonify({'error': 'Enter a valid 10-digit mobile number.'}), 400
+        if len(otp) != 6:
+            return jsonify({'error': 'Enter the 6-digit OTP sent to your mobile.'}), 400
+        problem = _password_problem(password, confirm)
+        if problem:
+            return jsonify({'error': problem}), 400
+
+        if User.query.filter(db.func.lower(User.email) == email).first():
+            return jsonify({'error': 'An account with this email already exists.'}), 409
+        if User.query.filter_by(mobile=mobile).first():
+            return jsonify({'error': 'An account with this mobile number already exists.'}), 409
+
+        row = (OtpRequest.query.filter_by(mobile=mobile, used=False)
+               .order_by(OtpRequest.created_at.desc()).first())
+        if not row or row.expires_at < datetime.utcnow():
+            return jsonify({'error': 'OTP expired or not requested. Please request a new OTP.'}), 400
+        if row.attempts >= OTP_MAX_ATTEMPTS:
+            row.used = True
+            db.session.commit()
+            return jsonify({'error': 'Too many wrong attempts. Please request a new OTP.'}), 400
+        if not hmac.compare_digest(row.otp_hash, _hash_otp(mobile, otp)):
+            row.attempts += 1
+            db.session.commit()
+            return jsonify({'error': 'Incorrect OTP. Please check and try again.'}), 400
+
+        row.used = True
         new_user = User(
-            name=data['fullName'],
-            email=data['email'],
-            mobile=data.get('mobile', ''),
+            name=name,
+            email=email,
+            mobile=mobile,
             role='agent',  # public sign-up can only ever create agents
-            hashed_password=hashed_password
+            hashed_password=generate_password_hash(password, method='pbkdf2:sha256')
         )
-        
         db.session.add(new_user)
         db.session.commit()
-        logger.info(f"User {data['email']} created successfully")
-        
-        return jsonify({'message': 'User created successfully'}), 201
+        logger.info(f"User {email} created successfully")
+        return jsonify({'message': 'Account created successfully. Please sign in.'}), 201
     except Exception as e:
         logger.error(f"Signup error: {str(e)}", exc_info=True)
         db.session.rollback()
-        return jsonify({'error': 'Database error during registration', 'details': str(e)}), 500
+        return jsonify({'error': 'Could not create the account. Please try again.'}), 500
+
 
 def _do_login(required_role):
     """Shared login. The agent login and the admin login are separate endpoints:
     each only accepts accounts of its own role."""
     try:
         data = request.get_json(silent=True) or {}
-        if not data.get('email') or not data.get('password'):
-            return jsonify({'error': 'Could not verify', 'message': 'Missing email or password'}), 401
+        identifier = str(data.get('identifier') or data.get('email') or '').strip()
+        password = data.get('password') or ''
+        if not identifier or not password:
+            return jsonify({'error': 'Enter your email or mobile number and password.', 'message': 'Missing credentials'}), 401
 
-        user = User.query.filter_by(email=data['email']).first()
+        # Sign in with either the email address or the mobile number
+        if '@' in identifier:
+            candidates = User.query.filter(db.func.lower(User.email) == identifier.lower()).all()
+        else:
+            m = kyc_utils.normalize_mobile(identifier)
+            candidates = User.query.filter_by(mobile=m).all() if m else []
+        user = next((u for u in candidates if check_password_hash(u.hashed_password, password)), None)
         # One generic message for every failure so accounts cannot be probed
-        if not user or not check_password_hash(user.hashed_password, data['password']):
-            logger.warning(f"{required_role} login failed for {data.get('email')}")
-            return jsonify({'error': 'Invalid email or password', 'message': 'Invalid email or password'}), 401
+        if not user:
+            logger.warning(f"{required_role} login failed for {identifier}")
+            return jsonify({'error': 'Invalid email/mobile or password', 'message': 'Invalid email/mobile or password'}), 401
 
         if (user.role or 'agent') != required_role:
             logger.warning(f"{required_role} login refused for {user.email} (role={user.role})")
@@ -259,9 +364,10 @@ def admin_create_user(current_user):
         return jsonify({'error': "Role must be 'admin' or 'agent'."}), 400
     if len(password) < 8:
         return jsonify({'error': 'Password must be at least 8 characters.'}), 400
-    if User.query.filter_by(email=email).first():
+    if User.query.filter(db.func.lower(User.email) == email.lower()).first():
         return jsonify({'error': 'A user with this email already exists.'}), 409
-    user = User(name=name, email=email, mobile=data.get('mobile', ''), role=role,
+    email = email.lower()
+    user = User(name=name, email=email, mobile=kyc_utils.normalize_mobile(data.get('mobile')) or '', role=role,
                 hashed_password=generate_password_hash(password, method='pbkdf2:sha256'))
     db.session.add(user)
     db.session.commit()

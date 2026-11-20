@@ -102,14 +102,14 @@ export async function chatInsure(chatHistory) {
   return await response.json();
 }
 
-export async function loginUser(email, password) {
+export async function loginUser(identifier, password) {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ identifier, password })
   });
 
-  const data = await response.json();
+  const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     throw new Error(data.error || 'Login failed');
   }
@@ -117,19 +117,34 @@ export async function loginUser(email, password) {
   if (data.token) {
     localStorage.setItem('jwt_token', data.token);
     // Setting user for the layout.js to use
-    localStorage.setItem('user', JSON.stringify(data.user || { name: 'User', email: email }));
+    localStorage.setItem('user', JSON.stringify(data.user || { name: 'User', email: identifier }));
   }
   return data;
 }
 
-export async function signupUser(name, email, password) {
+export async function sendSignupOtp(mobile, email) {
+  const response = await fetch(`${API_BASE_URL}/auth/send-otp`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ mobile, email })
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const err = new Error(data.error || 'Could not send the OTP');
+    err.retryAfter = data.retryAfter;
+    throw err;
+  }
+  return data;
+}
+
+export async function signupUser({ fullName, email, mobile, otp, password, confirmPassword }) {
   const response = await fetch(`${API_BASE_URL}/auth/signup`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ fullName: name, email, password })
+    body: JSON.stringify({ fullName, email, mobile, otp, password, confirmPassword })
   });
 
-  const data = await response.json();
+  const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     throw new Error(data.error || 'Signup failed');
   }
@@ -137,11 +152,11 @@ export async function signupUser(name, email, password) {
   return data;
 }
 
-export async function adminLoginUser(email, password) {
+export async function adminLoginUser(identifier, password) {
   const response = await fetch(`${API_BASE_URL}/auth/admin-login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ identifier, password })
   });
 
   const data = await response.json().catch(() => ({}));

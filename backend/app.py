@@ -493,7 +493,7 @@ If a field cannot be found, set its value to "Not Found". Do not include any mar
             else:
                 content_payload.append(extracted_text)
                 
-            gemini_model_name = (os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash')
+            gemini_model_name = (os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash')
             model = genai.GenerativeModel(gemini_model_name)
             response = model.generate_content(
                 content_payload,
@@ -954,7 +954,7 @@ City Type: {rto_details.get('Tier', 'Unknown') if rto_details else 'Unknown'}
     user_data += f"\nCalculated HLV Term Insurance Cover Needed: {format_indian_currency(calculated_term_cover)}\n(Please MUST use this exact value for the recommended_term_cover in hlv_details for Term Insurance, and calculate coverage gap based on it.)\n"
     
     try:
-        model = genai.GenerativeModel((os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash'))
+        model = genai.GenerativeModel((os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash'))
         response = model.generate_content([system_prompt, user_data])
         
         ai_output = response.text
@@ -1334,7 +1334,7 @@ If the user asks about their Family Booklet or provides Family Booklet details, 
 """
 
         model = genai.GenerativeModel(
-            model_name=(os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash')
+            model_name=(os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash')
         )
         
         # Build history for Gemini

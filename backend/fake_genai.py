@@ -13,7 +13,7 @@ def configure(api_key):
 def list_models():
     class M:
         def __init__(self, n): self.name = n
-    return [M('models/gemini-2.5-flash')]
+    return [M('models/gemini-3.8-flash')]
 
 class GenerativeModel:
     def __init__(self, model_name):

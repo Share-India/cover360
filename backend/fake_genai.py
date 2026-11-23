@@ -1,4 +1,4 @@
-﻿import os
+import os
 import requests
 import json
 import base64
@@ -53,14 +53,19 @@ class GenerativeModel:
             parts.append({"text": str(contents)})
             
         payload = {"contents": [{"parts": parts}]}
-        resp = requests.post(url, json=payload, headers={"x-goog-api-key": _api_key.strip()}).json()
+        resp = requests.post(url, json=payload, headers={"x-goog-api-key": _api_key.strip()}, timeout=120).json()
         class R:
             def __init__(self, t): self.text = t
         try:
             return R(resp['candidates'][0]['content']['parts'][0]['text'])
         except Exception as e:
             print(f"Gemini API Exception parsing response: {resp}", flush=True)
-            return R("{}")
+            # Raise the provider's real error (bad key, wrong model, quota...) instead of
+            # silently returning an empty result that would be saved as a blank policy.
+            err = resp.get('error', {}) if isinstance(resp, dict) else {}
+            if err:
+                raise RuntimeError(f"Gemini API error {err.get('code', '')}: {err.get('message', err)}")
+            return R("{}")  # e.g. the answer was blocked: no error, but also no text
 
     def start_chat(self, history=None):
         class Chat:

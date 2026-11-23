@@ -80,7 +80,7 @@ def extract_kyc(genai, kyc_bytes, filename, pdf_to_images):
     else:
         return None
 
-    model = genai.GenerativeModel(os.environ.get('GEMINI_MODEL', 'gemini-2.5-flash'))
+    model = genai.GenerativeModel((os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash'))
     response = model.generate_content(payload)
     text = response.text or ''
     start, end = text.find('{'), text.rfind('}')

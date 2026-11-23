@@ -6,6 +6,7 @@ import styles from './Dashboard.module.css';
 import RecommendationCard from './RecommendationCard';
 import { analyzePolicy, updatePolicy, fetchRecommendations, generateReport, chatInsure } from '../../utils/api';
 import { generatePDFReport } from '../../utils/pdfGenerator';
+import { formatRupees } from '../../utils/format';
 
 export default function Dashboard() {
   const router = useRouter();
@@ -469,7 +470,7 @@ export default function Dashboard() {
                      <div className="text-xs text-slate-400 mt-0.5">{p.manufacturerYear || 'N/A'}</div>
                   </td>
                   <td className="p-4">
-                     <div className="text-sm font-bold text-slate-700">Rs. {Number(p.idv) ? Number(p.idv).toLocaleString('en-IN') : p.idv || 'N/A'}</div>
+                     <div className="text-sm font-bold text-slate-700">{formatRupees(p.idv)}</div>
                   </td>
                   <td className="p-4">
                      <button onClick={(e) => { e.stopPropagation(); handleViewPolicy(p); }} className="text-[#0066FF] hover:text-blue-800 font-bold text-xs flex items-center gap-1 transition-colors px-3 py-1.5 border border-blue-200 rounded-full hover:bg-blue-50">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { fetchHistory } from '../../../utils/api';
+import { parseAmount } from '../../../utils/format';
 import { 
   PieChart, Pie, Cell, Tooltip as RechartsTooltip, Legend, 
   AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer,
@@ -38,7 +39,7 @@ export default function PolicyAnalysis() {
   const selectedPolicy = policies.find(p => String(p.id || p.document_id || policies.indexOf(p)) === String(selectedPolicyId));
 
   // Generate Chart Data based on selected policy
-  const idvValue = selectedPolicy && !isNaN(Number(selectedPolicy.idv)) ? Number(selectedPolicy.idv) : 500000;
+  const idvValue = (selectedPolicy && parseAmount(selectedPolicy.idv)) || 500000;
   
   const basePremium = idvValue * 0.015;
   const ownDamage = basePremium * 0.8;

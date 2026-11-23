@@ -1,5 +1,6 @@
 ﻿import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { formatRupees } from './format';
 
 export const generatePDFReport = (results, recommendations) => {
   try {
@@ -31,7 +32,7 @@ export const generatePDFReport = (results, recommendations) => {
       ['Registration No.', safeResults.vehicleRegistrationNo || safeResults.extracted_registration_no || 'N/A'],
       ['Vehicle Model', safeResults.vehicleModel || 'N/A'],
       ['Manufacturer Year', safeResults.manufacturerYear || 'N/A'],
-      ['IDV', safeResults.idv ? `Rs. ${Number(safeResults.idv).toLocaleString('en-IN')}` : 'N/A']
+      ['IDV', formatRupees(safeResults.idv)]
     ];
 
     autoTable(doc, {

@@ -1,4 +1,5 @@
 import os
+import time
 import requests
 import json
 import base64
@@ -53,19 +54,42 @@ class GenerativeModel:
             parts.append({"text": str(contents)})
             
         payload = {"contents": [{"parts": parts}]}
-        resp = requests.post(url, json=payload, headers={"x-goog-api-key": _api_key.strip()}, timeout=120).json()
-        class R:
-            def __init__(self, t): self.text = t
-        try:
-            return R(resp['candidates'][0]['content']['parts'][0]['text'])
-        except Exception as e:
-            print(f"Gemini API Exception parsing response: {resp}", flush=True)
-            # Raise the provider's real error (bad key, wrong model, quota...) instead of
-            # silently returning an empty result that would be saved as a blank policy.
-            err = resp.get('error', {}) if isinstance(resp, dict) else {}
-            if err:
-                raise RuntimeError(f"Gemini API error {err.get('code', '')}: {err.get('message', err)}")
-            return R("{}")  # e.g. the answer was blocked: no error, but also no text
+        # Try the main model; if Google keeps saying "busy", optionally try GEMINI_FALLBACK_MODEL
+        names = [self.model_name]
+        fb = (os.environ.get('GEMINI_FALLBACK_MODEL') or '').strip()
+        if fb:
+            fb = fb if fb.startswith('models/') else 'models/' + fb
+            if fb != self.model_name:
+                names.append(fb)
+
+        last_error = None
+        for name in names:
+            url = f"https://generativelanguage.googleapis.com/v1beta/{name}:generateContent"
+            for attempt in range(3):
+                try:
+                    resp = requests.post(url, json=payload, headers={"x-goog-api-key": _api_key.strip()}, timeout=90).json()
+                except requests.exceptions.Timeout:
+                    raise RuntimeError("Gemini API error 504: the request timed out")
+                try:
+                    text = resp['candidates'][0]['content']['parts'][0]['text']
+                    class R:
+                        def __init__(self, t): self.text = t
+                    return R(text)
+                except Exception:
+                    pass
+                print(f"Gemini API Exception parsing response: {resp}", flush=True)
+                err = resp.get('error', {}) if isinstance(resp, dict) else {}
+                if not err:
+                    # e.g. the answer was blocked: no error, but also no text
+                    class R:
+                        def __init__(self, t): self.text = t
+                    return R("{}")
+                last_error = RuntimeError(f"Gemini API error {err.get('code', '')}: {err.get('message', err)}")
+                if err.get('code') in (429, 500, 503) and attempt < 2:
+                    time.sleep(3 * (attempt + 1))   # busy / rate limited: wait and retry
+                    continue
+                break
+        raise last_error
 
     def start_chat(self, history=None):
         class Chat:

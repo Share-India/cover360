@@ -29,7 +29,9 @@ export async function analyzePolicy(file, kycFile = null) {
   });
 
   if (!response.ok) {
-    throw new Error(`Failed to analyze policy (Status ${response.status})`);
+    // Show the server's own explanation when it gives one (e.g. "AI service is busy")
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body.error || `Failed to analyze policy (Status ${response.status})`);
   }
   return await response.json();
 }

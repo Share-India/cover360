@@ -619,9 +619,11 @@ If a field cannot be found, set its value to "Not Found". Do not include any mar
             
             print(f"DEBUG: Parsed data successfully via Gemini: {parsed_data}", flush=True)
         except Exception as e:
-            models = [m.name for m in genai.list_models()]
-            print(f"Gemini API Error: {e}. Models: {models}", flush=True)
-            return jsonify({'error': f'Failed to process document: {str(e)}. Available models: {models}'}), 500
+            print(f"Gemini API Error: {e}", flush=True)
+            msg = str(e)
+            if 'error 503' in msg or 'error 429' in msg or 'error 504' in msg:
+                return jsonify({'error': 'The AI service is busy right now. Please try again in a minute.'}), 503
+            return jsonify({'error': f'Failed to process document: {msg}'}), 500
     else:
         print(f"DEBUG: gemini_client_ready is FALSE! key='{gemini_api_key}'", flush=True)
             

@@ -6,6 +6,7 @@ services:
       SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in the .env file next to this compose file}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.8-flash}
+      GEMINI_FALLBACK_MODEL: ${GEMINI_FALLBACK_MODEL:-}
       # SMS OTP for sign-up (MSG91)
       MSG91_AUTH_KEY: ${MSG91_AUTH_KEY:-}
       MSG91_TEMPLATE_ID: ${MSG91_TEMPLATE_ID:-}
